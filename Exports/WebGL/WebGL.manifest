@@ -3,6 +3,6 @@ CompatibilityAssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: test-04_0
-      Hash: 860fef24183311916767080901849c73
-      CRC: 1054184790
+      Hash: 585b31d3f70a0cf2992fe7c483d61d2c
+      CRC: 3910251076
       Dependencies: {}
