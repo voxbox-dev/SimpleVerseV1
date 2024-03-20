@@ -1,0 +1,8 @@
+ManifestFileVersion: 1
+CompatibilityAssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: test-04_0
+      Hash: 860fef24183311916767080901849c73
+      CRC: 1054184790
+      Dependencies: {}
