@@ -1,43 +1,43 @@
 {
-"Date": "3/20/2024 2:45:15 AM",
+"Date": "3/20/2024 8:33:28 PM",
 "UnityVersion": "2021.3.21f1",
 "com.unity.scriptablebuildpipeline": "1.21.1",
 "traceEvents": [
-{"name": "AssetDatabase.SaveAssets", "ph": "X", "dur": 702.7, "tid": 1, "ts": 114, "pid": 1}
-,{"name": "SwitchToBuildPlatform", "ph": "X", "dur": 18, "tid": 1, "ts": 1896, "pid": 1}
-,{"name": "RebuildSpriteAtlasCache", "ph": "X", "dur": 1.50000000000006, "tid": 1, "ts": 1953, "pid": 1}
-,{"name": "BuildPlayerScripts", "ph": "X", "dur": 1767549.3, "tid": 1, "ts": 1978, "pid": 1}
-,{"name": "PostScriptsCallback", "ph": "X", "dur": 2.40000000007967, "tid": 1, "ts": 1769641, "pid": 1}
-,{"name": "CalculateSceneDependencyData", "ph": "X", "dur": 464385.3, "tid": 1, "ts": 1769705, "pid": 1}
-,{"name": "Calculate Scene Dependencies", "ph": "X", "dur": 464381.1, "tid": 1, "ts": 1769707, "pid": 1, "args": {"0":"4651f420e3ec94fa8b27b1072e75cec5"}}
-,{"name": "CalculateCustomDependencyData", "ph": "X", "dur": 3.1000000003587, "tid": 1, "ts": 2234242, "pid": 1}
-,{"name": "CalculateAssetDependencyData", "ph": "X", "dur": 6.49999999995998, "tid": 1, "ts": 2234329, "pid": 1}
-,{"name": "Gathering Cache Entries to Load", "ph": "X", "dur": 1.20000000015352, "tid": 1, "ts": 2234333, "pid": 1}
-,{"name": "Gathering Cache Entries to Save", "ph": "X", "dur": 0.599999999849388, "tid": 1, "ts": 2234335, "pid": 1}
-,{"name": "StripUnusedSpriteSources", "ph": "X", "dur": 0.999999999748979, "tid": 1, "ts": 2234396, "pid": 1}
-,{"name": "PostDependencyCallback", "ph": "X", "dur": 0.600000000304135, "tid": 1, "ts": 2234435, "pid": 1}
-,{"name": "GenerateBundlePacking", "ph": "X", "dur": 310.099999999693, "tid": 1, "ts": 2234482, "pid": 1}
-,{"name": "GenerateBundleCommands", "ph": "X", "dur": 11578, "tid": 1, "ts": 2234865, "pid": 1}
-,{"name": "GenerateSubAssetPathMaps", "ph": "X", "dur": 1.09999999995125, "tid": 1, "ts": 2246520, "pid": 1}
-,{"name": "GenerateBundleMaps", "ph": "X", "dur": 95.1000000000022, "tid": 1, "ts": 2246541, "pid": 1}
-,{"name": "Temporary Map Creations", "ph": "X", "dur": 40.3999999998632, "tid": 1, "ts": 2246541, "pid": 1}
-,{"name": "Populate BuildReferenceMaps", "ph": "X", "dur": 1.30000000035579, "tid": 1, "ts": 2246581, "pid": 1}
-,{"name": "Populate BuildUsageTagSet", "ph": "X", "dur": 52.9999999998836, "tid": 1, "ts": 2246583, "pid": 1}
-,{"name": "PostPackingCallback", "ph": "X", "dur": 0.29999999969732, "tid": 1, "ts": 2246664, "pid": 1}
-,{"name": "WriteSerializedFiles", "ph": "X", "dur": 679553.9, "tid": 1, "ts": 2246702, "pid": 1}
-,{"name": "RunCachedOperation", "ph": "X", "dur": 679548, "tid": 1, "ts": 2246707, "pid": 1, "args": {"0":"Total Entries: 1, Processed: 1, Cached: 0"}}
-,{"name": "Process Entries", "ph": "X", "dur": 679534, "tid": 1, "ts": 2246708, "pid": 1}
-,{"name": "Writing SceneBundleWriteOperation", "ph": "X", "dur": 665802.6, "tid": 1, "ts": 2246772, "pid": 1, "args": {"0":"CAB-e76b8db62d1d133c3fc93af6d4ec481c.sharedAssets"}}
-,{"name": "Process Cached Entries", "ph": "X", "dur": 1.40000000010332, "tid": 1, "ts": 2926244, "pid": 1}
-,{"name": "ArchiveAndCompressBundles", "ph": "X", "dur": 448463.8, "tid": 1, "ts": 2926462, "pid": 1}
-,{"name": "CreateWorkItems", "ph": "X", "dur": 14.9000000001251, "tid": 1, "ts": 2926468, "pid": 1}
-,{"name": "CopyingCachedFiles", "ph": "X", "dur": 0.499999999647116, "tid": 1, "ts": 2926483, "pid": 1}
-,{"name": "ArchiveItems", "ph": "X", "dur": 448341.6, "tid": 1, "ts": 2926484, "pid": 1, "args": {"0":"Archiving 1 Bundles"}}
-,{"name": "ArchiveSingleItem", "ph": "X", "dur": 447940.7, "tid": 332, "ts": 2926502, "pid": 1, "args": {"0":"test-04_0"}}
-,{"name": "Copying From Cache", "ph": "X", "dur": 2657.49999999997, "tid": 332, "ts": 3371785, "pid": 1, "args": {"0":"C:\\Users\\LEGION 5\\Desktop\\SimpleVerseV2\\Temp\\ContentBuildData\\test-04_0 -> C:\\Users\\LEGION 5\\Desktop\\SimpleVerseV2\\Exports\\WebGL\\test-04_0"}}
-,{"name": "PostArchiveProcessing", "ph": "X", "dur": 78.3999999998741, "tid": 1, "ts": 3374843, "pid": 1}
-,{"name": "AppendBundleHash", "ph": "X", "dur": 1.49999999985084, "tid": 1, "ts": 3375036, "pid": 1}
-,{"name": "GenerateLinkXml", "ph": "X", "dur": 0.500000000101863, "tid": 1, "ts": 3375069, "pid": 1}
-,{"name": "PostWritingCallback", "ph": "X", "dur": 0.399999999899592, "tid": 1, "ts": 3375125, "pid": 1}
+{"name": "AssetDatabase.SaveAssets", "ph": "X", "dur": 660.6, "tid": 1, "ts": 378, "pid": 1}
+,{"name": "SwitchToBuildPlatform", "ph": "X", "dur": 31.6999999999972, "tid": 1, "ts": 23079, "pid": 1}
+,{"name": "RebuildSpriteAtlasCache", "ph": "X", "dur": 4.20000000000087, "tid": 1, "ts": 23173, "pid": 1}
+,{"name": "BuildPlayerScripts", "ph": "X", "dur": 1982019.7, "tid": 1, "ts": 23208, "pid": 1}
+,{"name": "PostScriptsCallback", "ph": "X", "dur": 7.8000000000884, "tid": 1, "ts": 2012974, "pid": 1}
+,{"name": "CalculateSceneDependencyData", "ph": "X", "dur": 472228.7, "tid": 1, "ts": 2013091, "pid": 1}
+,{"name": "Calculate Scene Dependencies", "ph": "X", "dur": 472216, "tid": 1, "ts": 2013101, "pid": 1, "args": {"0":"4651f420e3ec94fa8b27b1072e75cec5"}}
+,{"name": "CalculateCustomDependencyData", "ph": "X", "dur": 10.4999999998654, "tid": 1, "ts": 2490945, "pid": 1}
+,{"name": "CalculateAssetDependencyData", "ph": "X", "dur": 11.1999999999171, "tid": 1, "ts": 2491096, "pid": 1}
+,{"name": "Gathering Cache Entries to Load", "ph": "X", "dur": 1.60000000005311, "tid": 1, "ts": 2491103, "pid": 1}
+,{"name": "Gathering Cache Entries to Save", "ph": "X", "dur": 0.600000000304135, "tid": 1, "ts": 2491106, "pid": 1}
+,{"name": "StripUnusedSpriteSources", "ph": "X", "dur": 1.50000000030559, "tid": 1, "ts": 2491175, "pid": 1}
+,{"name": "PostDependencyCallback", "ph": "X", "dur": 3.40000000005602, "tid": 1, "ts": 2491222, "pid": 1}
+,{"name": "GenerateBundlePacking", "ph": "X", "dur": 292.60000000022, "tid": 1, "ts": 2491279, "pid": 1}
+,{"name": "GenerateBundleCommands", "ph": "X", "dur": 4336.09999999999, "tid": 1, "ts": 2491650, "pid": 1}
+,{"name": "GenerateSubAssetPathMaps", "ph": "X", "dur": 4.30000000005748, "tid": 1, "ts": 2496052, "pid": 1}
+,{"name": "GenerateBundleMaps", "ph": "X", "dur": 121.599999999944, "tid": 1, "ts": 2496104, "pid": 1}
+,{"name": "Temporary Map Creations", "ph": "X", "dur": 76.5000000001237, "tid": 1, "ts": 2496105, "pid": 1}
+,{"name": "Populate BuildReferenceMaps", "ph": "X", "dur": 2.70000000000437, "tid": 1, "ts": 2496182, "pid": 1}
+,{"name": "Populate BuildUsageTagSet", "ph": "X", "dur": 40.7000000000153, "tid": 1, "ts": 2496185, "pid": 1}
+,{"name": "PostPackingCallback", "ph": "X", "dur": 0.700000000051659, "tid": 1, "ts": 2496274, "pid": 1}
+,{"name": "WriteSerializedFiles", "ph": "X", "dur": 539706.2, "tid": 1, "ts": 2496341, "pid": 1}
+,{"name": "RunCachedOperation", "ph": "X", "dur": 539695.3, "tid": 1, "ts": 2496351, "pid": 1, "args": {"0":"Total Entries: 1, Processed: 1, Cached: 0"}}
+,{"name": "Process Entries", "ph": "X", "dur": 539675.3, "tid": 1, "ts": 2496353, "pid": 1}
+,{"name": "Writing SceneBundleWriteOperation", "ph": "X", "dur": 533995.6, "tid": 1, "ts": 2496413, "pid": 1, "args": {"0":"CAB-5555019ac786aaef032cc05d612fb36c.sharedAssets"}}
+,{"name": "Process Cached Entries", "ph": "X", "dur": 2.1999999999025, "tid": 1, "ts": 3036030, "pid": 1}
+,{"name": "ArchiveAndCompressBundles", "ph": "X", "dur": 284850.6, "tid": 1, "ts": 3036195, "pid": 1}
+,{"name": "CreateWorkItems", "ph": "X", "dur": 19.6000000000822, "tid": 1, "ts": 3036207, "pid": 1}
+,{"name": "CopyingCachedFiles", "ph": "X", "dur": 0.800000000253931, "tid": 1, "ts": 3036227, "pid": 1}
+,{"name": "ArchiveItems", "ph": "X", "dur": 284695.4, "tid": 1, "ts": 3036228, "pid": 1, "args": {"0":"Archiving 1 Bundles"}}
+,{"name": "ArchiveSingleItem", "ph": "X", "dur": 278971.6, "tid": 119, "ts": 3036271, "pid": 1, "args": {"0":"simpleverse-test-v1_0"}}
+,{"name": "Copying From Cache", "ph": "X", "dur": 1023.1, "tid": 119, "ts": 3314218, "pid": 1, "args": {"0":"/Users/rhyanvargas/repos/_Unity_Repos/SimpleVerseV2/Temp/ContentBuildData/simpleverse-test-v1_0 -> /Users/rhyanvargas/repos/_Unity_Repos/SimpleVerseV2/Exports/WebGL/simpleverse-test-v1_0"}}
+,{"name": "PostArchiveProcessing", "ph": "X", "dur": 95.9000000002561, "tid": 1, "ts": 3320943, "pid": 1}
+,{"name": "AppendBundleHash", "ph": "X", "dur": 2.10000000015498, "tid": 1, "ts": 3321152, "pid": 1}
+,{"name": "GenerateLinkXml", "ph": "X", "dur": 4.40000000025975, "tid": 1, "ts": 3321188, "pid": 1}
+,{"name": "PostWritingCallback", "ph": "X", "dur": 0.599999999849388, "tid": 1, "ts": 3321238, "pid": 1}
 ]
 }

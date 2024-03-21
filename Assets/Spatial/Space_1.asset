@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   sku: 
-  packageName: Space_1
-  thumbnail: {fileID: 0}
-  savedProjectSettings: {fileID: 0}
+  packageName: simpleverse_test_v1
+  thumbnail: {fileID: 2800000, guid: a2f3c440a7a544ac1a01a7686ef850ac, type: 3}
+  savedProjectSettings: {fileID: 11400000, guid: b4d3f3931508d4e3381693ee23f6fe04,
+    type: 2}
   worldID: 
-  scene: {fileID: 0}
+  scene: {fileID: 102900000, guid: 4651f420e3ec94fa8b27b1072e75cec5, type: 3}
   csharpAssembly: {fileID: 0}
   embeddedPackageAssets: []
   settings:
