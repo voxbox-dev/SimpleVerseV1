@@ -3,6 +3,6 @@ CompatibilityAssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: simpleverse-test-v1_0
-      Hash: 82dd3add1dbfbaed792626aa6f75dd0b
-      CRC: 1285540918
+      Hash: 94073dc21c19099a38376de609270ef0
+      CRC: 2962383172
       Dependencies: {}

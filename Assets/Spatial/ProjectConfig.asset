@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ProjectConfig
   m_EditorClassIdentifier: 
   _configVersion: 1
-  _defaultWorldID: 4t2lk7qo1sgsfg07nwrds
+  _defaultWorldID: sxuTuv9qF0mqLNmRZuvvg
   _packages:
   - {fileID: 11400000, guid: a1c3e50380c6994419f19d8ba8417452, type: 2}
