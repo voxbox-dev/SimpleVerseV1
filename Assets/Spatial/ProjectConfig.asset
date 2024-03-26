@@ -1,18 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 560f19667486044ebbddf6431213fe74, type: 3}
-  m_Name: ProjectConfig
-  m_EditorClassIdentifier: 
-  _configVersion: 1
-  _defaultWorldID: sxuTuv9qF0mqLNmRZuvvg
-  _packages:
-  - {fileID: 11400000, guid: a1c3e50380c6994419f19d8ba8417452, type: 2}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3acec8d38ddd8daee55b86b16df4f6bcfc9ac26c0c4e87b06d8a4bb99b573ad5
+size 548
