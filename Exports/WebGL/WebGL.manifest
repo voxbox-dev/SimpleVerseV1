@@ -3,6 +3,6 @@ CompatibilityAssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: simpleverse-main-sb-s4_0
-      Hash: b85712e5b6f687be5b7d71b65c1be5fb
-      CRC: 840212006
+      Hash: ee570c2dc7bc21cf01025424781ba921
+      CRC: 169221768
       Dependencies: {}
