@@ -1,28 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5621e5ad1b9084f8bb66de8251cfd5a3, type: 3}
-  m_Name: Space_1
-  m_EditorClassIdentifier: 
-  version: 1
-  sku: 
-  packageName: simpleverse_test_v1
-  thumbnail: {fileID: 2800000, guid: a2f3c440a7a544ac1a01a7686ef850ac, type: 3}
-  savedProjectSettings: {fileID: 11400000, guid: b4d3f3931508d4e3381693ee23f6fe04,
-    type: 2}
-  worldID: 
-  scene: {fileID: 102900000, guid: 4651f420e3ec94fa8b27b1072e75cec5, type: 3}
-  csharpAssembly: {fileID: 0}
-  embeddedPackageAssets: []
-  settings:
-    serverInstancingEnabled: 1
-    serverCapacitySetting: 0
-    serverInstanceCapacity: 16
+version https://git-lfs.github.com/spec/v1
+oid sha256:57df7c6500a75ecb2673cb6808a03b7fb25828e810b870fe964cb2a199a40f58
+size 879
