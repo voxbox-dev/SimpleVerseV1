@@ -2,7 +2,7 @@ ManifestFileVersion: 1
 CompatibilityAssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: simpleverse-main-sb-s4_0
-      Hash: 2208063af9b4cd5357032abc54c60432
-      CRC: 1563704641
+      Name: simpleverse-test-environment_0
+      Hash: 8e0c8cd56ad05b5272afcbcbea83f76a
+      CRC: 778773593
       Dependencies: {}

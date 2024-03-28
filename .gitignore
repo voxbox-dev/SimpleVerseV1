@@ -71,6 +71,3 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 Assets/Scenes/Lighting/LightingData.asset
-Exports/WebGL/buildlogtep.json
-Exports/WebGL/simpleverse-main-sb-s4_0
-Exports/WebGL/WebGL.manifest
