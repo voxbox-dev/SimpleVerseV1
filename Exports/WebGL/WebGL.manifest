@@ -1,8 +1,0 @@
-ManifestFileVersion: 1
-CompatibilityAssetBundleManifest:
-  AssetBundleInfos:
-    Info_0:
-      Name: simpleverse-v1_0
-      Hash: 7c633225770e702502d024586acc6f46
-      CRC: 4165758147
-      Dependencies: {}
