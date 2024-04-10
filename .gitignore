@@ -71,3 +71,10 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 Assets/Scenes/Lighting/LightingData.asset
+
+# Build Files
+/Exports
+
+#Spatial folders
+/[Aa]ssets/Spatial/*
+/Exports/WebGL/
