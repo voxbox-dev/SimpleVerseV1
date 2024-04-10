@@ -62,7 +62,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - Color_36218622185947c6a5ae36366d8e21d8: {r: 0.03586687, g: 0.31310427, b: 0.5849056,
+    - Color_36218622185947c6a5ae36366d8e21d8: {r: 0, g: 0.33206418, b: 0.40392157,
         a: 1}
     - Color_93e06cd551a5449091bcde90b46765a0: {r: 1, g: 1, b: 1, a: 0.65882355}
     - Vector2_4351ac2be1d74054986ec5378db9d578: {r: 4, g: 4, b: 0, a: 0}
