@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7652175096591338970}
-  m_LocalRotation: {x: -0.00000005960465, y: -0.70710677, z: 0.00000005960465, w: 0.70710677}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 15.456211, y: 0.0013664362, z: 12.928572}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -120,6 +120,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: npc-bot-male
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484128538761520324, guid: a8ebebf504ee74c29aec9dda35a34081,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.549
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: a8ebebf504ee74c29aec9dda35a34081,
         type: 3}
