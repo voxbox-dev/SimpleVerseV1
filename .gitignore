@@ -77,4 +77,5 @@ Assets/Scenes/Lighting/LightingData.asset
 
 #Spatial folders
 /[Aa]ssets/Spatial/*
+/[Aa]ssets/Spatial/
 /Exports/WebGL/
