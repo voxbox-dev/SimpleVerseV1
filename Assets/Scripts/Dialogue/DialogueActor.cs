@@ -14,29 +14,27 @@ namespace Simpleverse
         private DialogueSO dialogue;
 
         [SerializeField]
-        private SpatialInteractable interactableContinue;
-
-        [SerializeField]
         [Tooltip("Complete the task (id) for the current active quest. Leave at 0 if there is no task to complete")]
         private int completeTaskID = 0; // 0 means null since tasks start with id=1;
 
+
         // Serialized fields for the UnityEvents
         [SerializeField]
-        private UnityEvent onInteractEvent;
+        private UnityEvent onInteractStartEvent;
         [SerializeField]
         private UnityEvent onInteractEndEvent;
 
         private DialogueManager dialogueManager;
         private VirtualCameraManager virtualCameraManager;
         private PlayerController playerController;
+        private Vector3 playerTransform; // Cached player transform
+
         private bool hasInteractionStarted;
         private int currNodeID;
 
 
         void Start()
         {
-            interactableContinue.gameObject.SetActive(false);
-            interactableContinue.onInteractEvent += OnInteract;
             dialogueManager = FindAnyObjectByType<DialogueManager>();
             virtualCameraManager = FindAnyObjectByType<VirtualCameraManager>();
             playerController = FindAnyObjectByType<PlayerController>();
@@ -44,13 +42,12 @@ namespace Simpleverse
         }
         void Update()
         {
-            // Rotate the NPC to face the player
             transform.LookAt(SpatialBridge.actorService.localActor.avatar.position);
         }
         public void OnInteract()
         {
             // Invoke the event when OnInteract happens
-            onInteractEvent?.Invoke();
+            onInteractStartEvent?.Invoke();
 
             if (hasInteractionStarted == false)
             {
@@ -59,7 +56,6 @@ namespace Simpleverse
                 virtualCameraManager.ActivateFirstPersonPOV();
                 dialogueManager.SetDialoguePosition(transform.position);
                 currNodeID = dialogue.RootNodeID;
-                interactableContinue.gameObject.SetActive(true);
                 hasInteractionStarted = true;
             }
 
@@ -74,7 +70,6 @@ namespace Simpleverse
 
             dialogueManager.EndDialogue();
             hasInteractionStarted = false;
-            interactableContinue.gameObject.SetActive(false);
             playerController.DisablePlayerMove(false); // enable movement
             virtualCameraManager.DeactivateFirstPersonPOV();
             if (completeTaskID > 0)
@@ -103,7 +98,7 @@ namespace Simpleverse
         }
         void OnDestroy()
         {
-            interactableContinue.onInteractEvent -= OnInteract;
+
         }
 
     }
