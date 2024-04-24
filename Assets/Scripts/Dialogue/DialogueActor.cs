@@ -68,16 +68,23 @@ namespace Simpleverse
             // Invoke the event when OnInteractEnd happens
             onInteractEndEvent?.Invoke();
 
-            dialogueManager.EndDialogue();
+            dialogueManager?.EndDialogue();
             hasInteractionStarted = false;
-            playerController.DisablePlayerMove(false); // enable movement
-            virtualCameraManager.DeactivateFirstPersonPOV();
+            playerController?.DisablePlayerMove(false); // enable movement
+            virtualCameraManager?.DeactivateFirstPersonPOV();
             if (completeTaskID > 0)
             {
-                IQuestTask currentTask = SpatialBridge.questService.currentQuest.GetTaskByID((uint)completeTaskID);
-                Debug.Log("CURR TASK" + currentTask.id);
-                Debug.Log("CURR TASK" + currentTask.name);
-                currentTask.Complete();
+                var currentTask = SpatialBridge.questService.currentQuest?.GetTaskByID((uint)completeTaskID);
+                if (currentTask != null)
+                {
+                    Debug.Log("CURR TASK" + currentTask.id);
+                    Debug.Log("CURR TASK" + currentTask.name);
+                    currentTask.Complete();
+                }
+                else
+                {
+                    Debug.Log("Task with ID " + completeTaskID + " not found.");
+                }
             }
             else
             {
@@ -87,13 +94,14 @@ namespace Simpleverse
 
         void SpeakTo(int currNodeID)
         {
-            if (dialogue.GetNodeByID(currNodeID) == null)
+            var node = dialogue?.GetNodeByID(currNodeID);
+            if (node == null)
             {
                 OnEndInteract();
             }
             else
             {
-                dialogueManager.StartDialogue(dialogue, speakerName, currNodeID);
+                dialogueManager?.StartDialogue(dialogue, speakerName, currNodeID);
             }
         }
         void OnDestroy()
