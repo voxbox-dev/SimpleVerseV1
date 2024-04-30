@@ -3,7 +3,37 @@ guid: eafcf91f71643d64f81b1f0945b610a2
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CAR black body mat
+    second: {fileID: 2100000, guid: 1c3486f70a91b844a95a83123173ab02, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CAR body mat
+    second: {fileID: 2100000, guid: 0020f0ff3302f8044aff40bc83c14c67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CAR wheels mat
+    second: {fileID: 2100000, guid: ce4e674129d58b0439b66abe75ef31cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CAR wide body mat
+    second: {fileID: 2100000, guid: 99f6f9ba4b84ff54ca75143778b31eff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CAR windows and lights mat
+    second: {fileID: 2100000, guid: 259e8fa14c74d7a41965f0bae253d984, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CAR wing and grill mat
+    second: {fileID: 2100000, guid: 4a95eac4df2a9e5498aebcf776118a74, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
