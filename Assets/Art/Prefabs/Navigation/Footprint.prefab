@@ -178,10 +178,7 @@ MonoBehaviour:
     animatorEvent:
       events: []
     questEvent:
-      events:
-      - questID: 1
-        questEventType: 3
-        taskID: 2
+      events: []
   onExitEvent:
     id: 0
     unityEventIsSynced: 0
