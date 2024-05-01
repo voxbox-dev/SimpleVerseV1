@@ -12,6 +12,8 @@ namespace Simpleverse
 
         // Serialized Fields
         [SerializeField]
+        private GameObject invisibleWall;
+        [SerializeField]
         private QuizData quizData;
         [SerializeField]
         private GameObject questionObjectPrefab;
@@ -44,7 +46,7 @@ namespace Simpleverse
         private Transform prizeContainer;
 
         [SerializeField]
-        private GameObject resultsAnimationPrefab;
+        private GameObject resultsAnimationContainer;
 
         // Private Fields
         private int currentQuestionIndex = 0;
@@ -71,11 +73,20 @@ namespace Simpleverse
             questionObjectScript = questionObjectPrefab.GetComponent<QuizQuestion>();
             resultsObjectScript = resultsPrefab.GetComponent<QuizResults>();
         }
+
+        void OnEnable()
+        {
+            TriggerStart.SetActive(true);
+            TriggerRestart.SetActive(false);
+            TriggerClaim.SetActive(false);
+            invisibleWall.SetActive(false);
+        }
         public void StartQuiz()
         {
             currQuestion = quizData.questions[currentQuestionIndex];
             currQuestionText = currQuestion.questionText;
             TriggerStart.SetActive(false);
+            invisibleWall.SetActive(true);
 
             if (currQuestion != null)
             {
@@ -181,6 +192,7 @@ namespace Simpleverse
             DestroyInstantiatedObjs();
             DisplayResults();
             ActivateAnimations();
+            invisibleWall.SetActive(false);
         }
         public void DisplayResults()
         {
@@ -222,22 +234,27 @@ namespace Simpleverse
         }
         void SetClaimActive()
         {
-
-            // If the prizeObject has been spawned, show the TriggerClaim object
-            if (prizeObject == null)
+            if (TriggerClaim != null)
             {
                 TriggerClaim.SetActive(true);
             }
             else
             {
-                TriggerClaim.SetActive(false);
+                Debug.Log("CLAIM BUTTON NULL");
             }
         }
 
         public void ClaimPrize()
         {
             Reset();
-            SpawnPrize();
+            if (prizePrefab != null && prizeContainer != null && prizeObject == null)
+            {
+                SpawnPrize();
+            }
+            else
+            {
+                Debug.Log("PRIZE NULL");
+            }
         }
 
         void SpawnPrize()
@@ -247,6 +264,10 @@ namespace Simpleverse
             {
                 // Otherwise, instantiate the results object
                 prizeObject = Instantiate(prizePrefab, prizeContainer);
+            }
+            else
+            {
+                Debug.Log("PRIZE OBJECT ALREADY EXISTS");
             }
 
             prizeObject.SetActive(true);
@@ -290,7 +311,7 @@ namespace Simpleverse
         {
             currentQuestionIndex = 0;
             score = 0;
-            TriggerStart.SetActive(false);
+            TriggerStart.SetActive(true);
             // Hide objects
             TriggerRestart.SetActive(false);
             TriggerClaim.SetActive(false);
@@ -301,11 +322,11 @@ namespace Simpleverse
 
         void ActivateAnimations()
         {
-            resultsAnimationPrefab.SetActive(true);
+            resultsAnimationContainer.SetActive(true);
         }
         void DeactivateAnimations()
         {
-            resultsAnimationPrefab.SetActive(false);
+            resultsAnimationContainer.SetActive(false);
         }
     }
 }

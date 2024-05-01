@@ -188,6 +188,92 @@ Transform:
   m_Father: {fileID: 2158604901432799362}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &43334822
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1583025596}
+    m_Modifications:
+    - target: {fileID: 6937544779422502418, guid: a96b37810672a405b86b319b0482dc69,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937544779422502418, guid: a96b37810672a405b86b319b0482dc69,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937544779422502418, guid: a96b37810672a405b86b319b0482dc69,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.48000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937544779422502418, guid: a96b37810672a405b86b319b0482dc69,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937544779422502418, guid: a96b37810672a405b86b319b0482dc69,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.92388016
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937544779422502418, guid: a96b37810672a405b86b319b0482dc69,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937544779422502418, guid: a96b37810672a405b86b319b0482dc69,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.38268188
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937544779422502418, guid: a96b37810672a405b86b319b0482dc69,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937544779422502418, guid: a96b37810672a405b86b319b0482dc69,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937544779422502418, guid: a96b37810672a405b86b319b0482dc69,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937544779422502418, guid: a96b37810672a405b86b319b0482dc69,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937544779422502419, guid: a96b37810672a405b86b319b0482dc69,
+        type: 3}
+      propertyPath: m_Name
+      value: Q2-T3 -TaskMarker-Trigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937544779422502419, guid: a96b37810672a405b86b319b0482dc69,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a96b37810672a405b86b319b0482dc69, type: 3}
+--- !u!4 &43334823 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6937544779422502418, guid: a96b37810672a405b86b319b0482dc69,
+    type: 3}
+  m_PrefabInstance: {fileID: 43334822}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &43334824 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6937544779422502419, guid: a96b37810672a405b86b319b0482dc69,
+    type: 3}
+  m_PrefabInstance: {fileID: 43334822}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &47988143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,77 +1575,6 @@ Transform:
   m_Father: {fileID: 2158604901432799362}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &328320501
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 328320502}
-  - component: {fileID: 328320503}
-  m_Layer: 0
-  m_Name: Q2-T3-Instructions
-  m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &328320502
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 328320501}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.867, y: 0.7199998, z: -1.075}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1583025596}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &328320503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 328320501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 679647456a363450ab8d072b2a91f5a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  title: How to play
-  description: '1. Go near an option
-
-    2. Then select option by interacting with
-    it.
-
-    3. View results at the end
-
-
-    Good Luck!'
-  backgroundColor: {r: 1, g: 1, b: 1, a: 0.9019608}
-  foregroundColor: {r: 0, g: 0, b: 0, a: 1}
-  sprite: {fileID: 0}
-  spriteSize: 0.75
-  spriteRectSize: {x: 0, y: 0}
-  textDisplayRadius: 1.6452179
-  markerDisplayRadius: 10.572935
-  onTextDisplayedEvent:
-    id: 0
-    unityEventIsSynced: 0
-    unityEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    animatorEvent:
-      events: []
-    questEvent:
-      events: []
 --- !u!1 &344450441
 GameObject:
   m_ObjectHideFlags: 0
@@ -1740,6 +1755,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Q1-T1 -TaskMarker
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937544779422502419, guid: a96b37810672a405b86b319b0482dc69,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a96b37810672a405b86b319b0482dc69, type: 3}
@@ -2080,7 +2100,7 @@ PrefabInstance:
     - target: {fileID: 1489863755972253236, guid: 3898da72c80894a419ffe47ad2e8c52d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 33
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 1489863755972253236, guid: 3898da72c80894a419ffe47ad2e8c52d,
         type: 3}
@@ -2410,7 +2430,7 @@ MonoBehaviour:
   questRewards: []
   tasks:
   - id: 1
-    name: Goto the Library
+    name: Find Coach Sal in the Library
     type: 0
     progressSteps: 0
     taskMarkers:
@@ -2442,7 +2462,43 @@ MonoBehaviour:
       unityEventIsSynced: 0
       unityEvent:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 1883726658}
+            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_MethodName: SetActive
+            m_Mode: 6
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 1
+            m_CallState: 2
+          - m_Target: {fileID: 793415939}
+            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_MethodName: SetActive
+            m_Mode: 6
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 768483654}
+            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_MethodName: SetActive
+            m_Mode: 6
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 1
+            m_CallState: 2
       animatorEvent:
         events: []
       questEvent:
@@ -2482,6 +2538,18 @@ MonoBehaviour:
         m_PersistentCalls:
           m_Calls:
           - m_Target: {fileID: 1883726658}
+            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_MethodName: SetActive
+            m_Mode: 6
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 1
+            m_CallState: 2
+          - m_Target: {fileID: 1583025595}
             m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_MethodName: SetActive
             m_Mode: 6
@@ -3477,12 +3545,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744469388}
   m_LocalRotation: {x: -0, y: 0.60876054, z: -0, w: 0.7933541}
-  m_LocalPosition: {x: 0, y: 0.06, z: -0.653}
+  m_LocalPosition: {x: 0, y: 0.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1883726659}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &744469390
 MonoBehaviour:
@@ -3497,8 +3565,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   title: What is the Metaverse?
-  description: Press play on the video wall. After the video ends, start the quiz
-    by pressing the action button near the panel next to this...
+  description: "1. Point and click the video. \n2. After the video ends, head towards
+    the next wall panel for next instructions"
   backgroundColor: {r: 1, g: 1, b: 1, a: 0.4}
   foregroundColor: {r: 0, g: 0, b: 0, a: 1}
   sprite: {fileID: 0}
@@ -3512,19 +3580,7 @@ MonoBehaviour:
     unityEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 768483654}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1568739310}
+        - m_Target: {fileID: 43334824}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -3641,7 +3697,7 @@ PrefabInstance:
     - target: {fileID: 6937544779422502418, guid: a96b37810672a405b86b319b0482dc69,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6937544779422502418, guid: a96b37810672a405b86b319b0482dc69,
         type: 3}
@@ -4398,6 +4454,12 @@ PrefabInstance:
 --- !u!4 &893302358 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6937544779422502418, guid: a96b37810672a405b86b319b0482dc69,
+    type: 3}
+  m_PrefabInstance: {fileID: 893302357}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &893302359 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6937544779422502419, guid: a96b37810672a405b86b319b0482dc69,
     type: 3}
   m_PrefabInstance: {fileID: 893302357}
   m_PrefabAsset: {fileID: 0}
@@ -5608,7 +5670,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1251708696}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -36.968, y: 1.7200003, z: -173.294}
+  m_LocalPosition: {x: -52.75, y: -1.71, z: -173.294}
   m_LocalScale: {x: 100, y: 99.999985, z: 99.999985}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5853,6 +5915,75 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1001 &1364528420
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1583025596}
+    m_Modifications:
+    - target: {fileID: 9007299379909522297, guid: 9193ab57dd3e749078bcd3d17d3113a2,
+        type: 3}
+      propertyPath: m_Name
+      value: Quiz
+      objectReference: {fileID: 0}
+    - target: {fileID: 9007299379909522303, guid: 9193ab57dd3e749078bcd3d17d3113a2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9007299379909522303, guid: 9193ab57dd3e749078bcd3d17d3113a2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.20480347
+      objectReference: {fileID: 0}
+    - target: {fileID: 9007299379909522303, guid: 9193ab57dd3e749078bcd3d17d3113a2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.62000036
+      objectReference: {fileID: 0}
+    - target: {fileID: 9007299379909522303, guid: 9193ab57dd3e749078bcd3d17d3113a2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.42204285
+      objectReference: {fileID: 0}
+    - target: {fileID: 9007299379909522303, guid: 9193ab57dd3e749078bcd3d17d3113a2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9007299379909522303, guid: 9193ab57dd3e749078bcd3d17d3113a2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9007299379909522303, guid: 9193ab57dd3e749078bcd3d17d3113a2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9007299379909522303, guid: 9193ab57dd3e749078bcd3d17d3113a2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9007299379909522303, guid: 9193ab57dd3e749078bcd3d17d3113a2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9007299379909522303, guid: 9193ab57dd3e749078bcd3d17d3113a2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9007299379909522303, guid: 9193ab57dd3e749078bcd3d17d3113a2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9193ab57dd3e749078bcd3d17d3113a2, type: 3}
 --- !u!1001 &1384794426
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6708,7 +6839,7 @@ PrefabInstance:
     - target: {fileID: 3597891383006025810, guid: 9007fb396d8ab49a598955691ca09a1a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.069
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3597891383006025810, guid: 9007fb396d8ab49a598955691ca09a1a,
         type: 3}
@@ -8739,88 +8870,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565426986}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1568739310
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1568739311}
-  - component: {fileID: 1568739312}
-  m_Layer: 0
-  m_Name: Q2-T2-StartQuiz
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1568739311
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1568739310}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.338, y: 0.264, z: -1.08}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1883726659}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1568739312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1568739310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1c437d99c9a4616adbe21f3ffa0e18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactText: I'm ready to take the Quiz!
-  iconType: 1
-  icon: {fileID: 21300000, guid: 90443333bd8a54531aa702a832f79e9a, type: 3}
-  interactiveRadius: 4.235977
-  visibilityRadius: 9.826366
-  onInteractEvent:
-    id: 0
-    unityEventIsSynced: 0
-    unityEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    animatorEvent:
-      events: []
-    questEvent:
-      events:
-      - questID: 2
-        questEventType: 4
-        taskID: 2
-  onEnterEvent:
-    id: 0
-    unityEventIsSynced: 0
-    unityEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    animatorEvent:
-      events: []
-    questEvent:
-      events: []
-  onExitEvent:
-    id: 0
-    unityEventIsSynced: 0
-    unityEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    animatorEvent:
-      events: []
-    questEvent:
-      events: []
 --- !u!1 &1583025595
 GameObject:
   m_ObjectHideFlags: 0
@@ -8849,7 +8898,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 328320502}
+  - {fileID: 43334823}
+  - {fileID: 9007299380701527643}
   m_Father: {fileID: 2158604901432799362}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9841,8 +9891,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1836538147}
-  m_LocalRotation: {x: -0, y: -0.60876054, z: -0, w: 0.7933541}
-  m_LocalPosition: {x: -39.57, y: -5.59, z: -167.473}
+  m_LocalRotation: {x: -0, y: -0.38268188, z: -0, w: 0.92388016}
+  m_LocalPosition: {x: -40.622, y: -5.59, z: -168.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9850,7 +9900,7 @@ Transform:
   - {fileID: 1384794427}
   m_Father: {fileID: 2158604901432799362}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: -75, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
 --- !u!1 &1858380729
 GameObject:
   m_ObjectHideFlags: 0
@@ -10047,13 +10097,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1883726658}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -35.28, y: -4.65, z: -167.163}
+  m_LocalPosition: {x: -39.31, y: -4.65, z: -167.163}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 744469389}
   - {fileID: 768483653}
-  - {fileID: 1568739311}
+  - {fileID: 744469389}
   m_Father: {fileID: 2158604901432799362}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -49966,6 +50015,18 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 1
             m_CallState: 2
+          - m_Target: {fileID: 360869384}
+            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_MethodName: SetActive
+            m_Mode: 6
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       animatorEvent:
         events: []
       questEvent:
@@ -49989,30 +50050,6 @@ MonoBehaviour:
               m_BoolArgument: 1
             m_CallState: 2
           - m_Target: {fileID: 1773517852}
-            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_MethodName: SetActive
-            m_Mode: 6
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 1
-            m_CallState: 2
-          - m_Target: {fileID: 1999516833}
-            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_MethodName: SetActive
-            m_Mode: 6
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 1
-            m_CallState: 2
-          - m_Target: {fileID: 1675995274}
             m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_MethodName: SetActive
             m_Mode: 6
@@ -50088,6 +50125,18 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 1
             m_CallState: 2
+          - m_Target: {fileID: 1999516833}
+            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_MethodName: SetActive
+            m_Mode: 6
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 1
+            m_CallState: 2
       animatorEvent:
         events: []
       questEvent:
@@ -50131,7 +50180,8 @@ MonoBehaviour:
     name: Find Coach O in Rec room
     type: 0
     progressSteps: 0
-    taskMarkers: []
+    taskMarkers:
+    - {fileID: 893302359}
     onStartedEvent:
       id: 0
       unityEventIsSynced: 0
@@ -50147,7 +50197,19 @@ MonoBehaviour:
       unityEventIsSynced: 0
       unityEvent:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 1675995274}
+            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_MethodName: SetActive
+            m_Mode: 6
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       animatorEvent:
         events: []
       questEvent:
@@ -50157,7 +50219,19 @@ MonoBehaviour:
       unityEventIsSynced: 0
       unityEvent:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 1675995274}
+            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_MethodName: SetActive
+            m_Mode: 6
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 1
+            m_CallState: 2
       animatorEvent:
         events: []
       questEvent:
@@ -50202,7 +50276,19 @@ MonoBehaviour:
     unityEventIsSynced: 0
     unityEvent:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1836538147}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
     animatorEvent:
       events: []
     questEvent:
@@ -50217,6 +50303,18 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1773517852}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1836538147}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -52330,7 +52428,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4404839247605695133, guid: d6b9013ffa5dd1240a1b0dc62385f1e4, type: 3}
+  - {fileID: 2100000, guid: 9c7b172e2306f1c4e9018ec896d49f97, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -57969,8 +58067,8 @@ Transform:
   - {fileID: 1749739948}
   - {fileID: 3160365107137880904}
   - {fileID: 806296727956915337}
-  - {fileID: 498572240}
   - {fileID: 5790489668407270175}
+  - {fileID: 498572240}
   - {fileID: 7690176420523371964}
   - {fileID: 1220214703}
   - {fileID: 7140237}
@@ -68279,7 +68377,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4404839247605695133, guid: d6b9013ffa5dd1240a1b0dc62385f1e4, type: 3}
+  - {fileID: 2100000, guid: 9c7b172e2306f1c4e9018ec896d49f97, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -68546,7 +68644,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2158604901432799362}
-  m_RootOrder: 34
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &5791940388167203250
 Transform:
@@ -71001,7 +71099,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4404839247605695133, guid: d6b9013ffa5dd1240a1b0dc62385f1e4, type: 3}
+  - {fileID: 2100000, guid: 9c7b172e2306f1c4e9018ec896d49f97, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -78135,6 +78233,12 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!4 &9007299380701527643 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9007299379909522303, guid: 9193ab57dd3e749078bcd3d17d3113a2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1364528420}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &9016917782363710905
 GameObject:
   m_ObjectHideFlags: 0
