@@ -7,29 +7,41 @@ namespace Simpleverse
     public class VirtualCameraManager : MonoBehaviour
     {
         [SerializeField]
-        private GameObject virtualCamera;
+        private GameObject npcVcam;
 
         [SerializeField]
-        private Vector3 virtualCameraPosition;
+        private Vector3 npcVcamPosition, npcVcamRotation;
 
-        public void DisableCamera()
+        public void EnableNPCCam(Transform npcTransform)
         {
-            virtualCamera.SetActive(false);
-        }
+            // enable npc cam
+            npcVcam.SetActive(true);
 
-        void SetCameraPosition(Vector3 position)
-        {
-            virtualCamera.transform.position = position;
-            Debug.Log("Camera position set to: " + position);
-        }
-        void SetCameraRotation(Quaternion rotation)
-        {
-            virtualCamera.transform.rotation = rotation;
-        }
-        public void EnableCamera()
-        {
+            // calculate the forward facing direction of npcTransform
+            Vector3 npcForward = npcTransform.forward;
 
-            virtualCamera.SetActive(true);
+            // calculate the position of npcVcam away from npc
+            Vector3 vcamPosition = npcTransform.position + npcForward * npcVcamPosition.magnitude;
+
+            // adjust the height of vcamPosition
+            vcamPosition.y = npcTransform.position.y + npcVcamPosition.y;
+
+            // set the position of npcVcam
+            npcVcam.transform.position = vcamPosition;
+
+            // rotate npcVcam to face the npc
+            npcVcam.transform.LookAt(npcTransform);
+
+            // lock rotation on x and z axis
+            Vector3 rotation = npcVcam.transform.eulerAngles;
+            rotation.x = 0;
+            rotation.z = 0;
+            npcVcam.transform.eulerAngles = rotation;
+        }
+        public void DisableNPCCam()
+        {
+            // disable npc cam
+            npcVcam.SetActive(false);
         }
 
         public void ActivateFirstPersonPOV()
@@ -41,32 +53,7 @@ namespace Simpleverse
             SpatialBridge.cameraService.forceFirstPerson = false;
         }
 
-        public void FocusOnNPC(GameObject targetObj)
-        {
-            if (targetObj != null)
-            {
-                if (!virtualCamera.activeSelf)
-                {
-                    EnableCamera();
-                }
-                // Calculate the position in front of the NPC
-                Transform targetsTransform = targetObj.transform;
 
-                // adjust postion and rotation of virtual camera to be in front of the targetObj
-                Vector3 targetPosition = targetsTransform.position + targetsTransform.forward;
-                Vector3 lookPos = targetPosition - virtualCameraPosition;
-                // Make the camera always look at the NPC
-                virtualCamera.transform.LookAt(targetsTransform);
-                // Quaternion rotation = Quaternion.LookRotation(lookPos);
-
-                // Position the camera slightly above and behind the NPC
-                SetCameraPosition(targetPosition + virtualCameraPosition);
-            }
-            else
-            {
-                Debug.Log("NPCVirtualCameraObj or NPC is null");
-            }
-        }
         public void ActivateThirdPerson()
         {
             SpatialBridge.cameraService.zoomDistance = 1;

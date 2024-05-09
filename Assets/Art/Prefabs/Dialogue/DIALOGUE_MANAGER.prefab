@@ -47,4 +47,4 @@ MonoBehaviour:
   dialogueBoxParent: {fileID: 0}
   speaker: {fileID: 0}
   message: {fileID: 0}
-  DialogueBoxPosition: {x: -0.031, y: 2.08, z: 0.082}
+  DialogueBoxPosition: {x: -0.031, y: 2.2, z: 0.082}

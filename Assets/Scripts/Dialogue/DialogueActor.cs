@@ -51,6 +51,7 @@ namespace Simpleverse
             if (hasInteractionStarted == false)
             {
                 // On first interaction...
+                virtualCameraManager.EnableNPCCam(transform);
                 playerController.DisablePlayerMove(true); // disable movement
                 dialogueManager.SetDialoguePosition(transform.position);
                 currNodeID = dialogue.RootNodeID;
@@ -65,8 +66,8 @@ namespace Simpleverse
         {
             // Invoke the event when OnInteractEnd happens
             onInteractEndEvent?.Invoke();
-
-            dialogueManager?.EndDialogue();
+            virtualCameraManager.DisableNPCCam();
+            dialogueManager.EndDialogue();
             hasInteractionStarted = false;
             playerController?.DisablePlayerMove(false); // enable movement
             if (completeTaskID > 0)
