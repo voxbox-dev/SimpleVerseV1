@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using SpatialSys.UnitySDK;
 using UnityEngine;
 using UnityEngine.Events;
@@ -27,8 +25,6 @@ namespace Simpleverse
         private DialogueManager dialogueManager;
         private VirtualCameraManager virtualCameraManager;
         private PlayerController playerController;
-        private Vector3 playerTransform; // Cached player transform
-
         private bool hasInteractionStarted;
         private int currNodeID;
 
@@ -43,6 +39,9 @@ namespace Simpleverse
         void Update()
         {
             transform.LookAt(SpatialBridge.actorService.localActor.avatar.position);
+            // lock rotation on x and z axis
+            transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
+
         }
         public void OnInteract()
         {
@@ -53,7 +52,6 @@ namespace Simpleverse
             {
                 // On first interaction...
                 playerController.DisablePlayerMove(true); // disable movement
-                virtualCameraManager.ActivateFirstPersonPOV();
                 dialogueManager.SetDialoguePosition(transform.position);
                 currNodeID = dialogue.RootNodeID;
                 hasInteractionStarted = true;
@@ -71,7 +69,6 @@ namespace Simpleverse
             dialogueManager?.EndDialogue();
             hasInteractionStarted = false;
             playerController?.DisablePlayerMove(false); // enable movement
-            virtualCameraManager?.DeactivateFirstPersonPOV();
             if (completeTaskID > 0)
             {
                 var currentTask = SpatialBridge.questService.currentQuest?.GetTaskByID((uint)completeTaskID);

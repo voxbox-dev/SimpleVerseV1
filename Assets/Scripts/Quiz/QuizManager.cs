@@ -1,8 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using SpatialSys.UnitySDK;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Simpleverse
@@ -47,6 +44,9 @@ namespace Simpleverse
 
         [SerializeField]
         private GameObject resultsAnimationContainer;
+        [SerializeField]
+        private GameObject successAudio, failureAudio;
+        private AudioSource successAudioSource, failureAudioSource;
 
         // Private Fields
         private int currentQuestionIndex = 0;
@@ -72,6 +72,8 @@ namespace Simpleverse
             totalPossibleScore = quizData.questions.Count * pointsPerQuestion;
             questionObjectScript = questionObjectPrefab.GetComponent<QuizQuestion>();
             resultsObjectScript = resultsPrefab.GetComponent<QuizResults>();
+            successAudioSource = successAudio.GetComponent<AudioSource>();
+            failureAudioSource = failureAudio.GetComponent<AudioSource>();
         }
 
         void OnEnable()
@@ -87,6 +89,7 @@ namespace Simpleverse
             currQuestionText = currQuestion.questionText;
             TriggerStart.SetActive(false);
             invisibleWall.SetActive(true);
+            DeactivateAnimations();
 
             if (currQuestion != null)
             {
@@ -194,32 +197,46 @@ namespace Simpleverse
             ActivateAnimations();
             invisibleWall.SetActive(false);
         }
+
         public void DisplayResults()
         {
-            string result;
-            // Calculate final score as a percentage
-            int finalScore = score * 100 / totalPossibleScore;
-            string scoreText = finalScore + "%";
+            int finalScore = CalculateFinalScore();
+            string result = DetermineResult(finalScore);
+            UpdateResultsObject(result, finalScore);
+        }
 
-            // Pass or Fail?
+        private int CalculateFinalScore()
+        {
+            return score * 100 / totalPossibleScore;
+        }
+
+        private string DetermineResult(int finalScore)
+        {
+            // If the final score is 100, the quiz is completed
             if (finalScore == 100)
             {
-                result = "Completed!";
                 SetClaimActive();
-                TriggerRestart.SetActive(false);
+                TriggerRestart.SetActive(true);
+                // play success audio clip
+                successAudioSource.Play();
+                return "Completed!";
             }
             else
             {
-                result = "Try Again";
                 TriggerRestart.SetActive(true);
+                // play failure audio clip
+                failureAudioSource.Play();
+                return "Try Again";
             }
+        }
 
-            // If the results object already exists, just update the results text
+        private void UpdateResultsObject(string result, int finalScore)
+        {
             if (resultsObject != null)
             {
                 resultsObjectScript = resultsObject.GetComponent<QuizResults>();
                 resultsObjectScript.SetResultsText(result);
-                resultsObjectScript.SetResultsScoreText(scoreText);
+                resultsObjectScript.SetResultsScoreText(finalScore + "%");
             }
             else
             {
@@ -227,7 +244,7 @@ namespace Simpleverse
                 resultsObject = Instantiate(resultsPrefab, resultsContainer);
                 resultsObjectScript = resultsObject.GetComponent<QuizResults>();
                 resultsObjectScript.SetResultsText(result);
-                resultsObjectScript.SetResultsScoreText(scoreText);
+                resultsObjectScript.SetResultsScoreText(finalScore + "%");
             }
 
             resultsObject.SetActive(true);
@@ -247,31 +264,30 @@ namespace Simpleverse
         public void ClaimPrize()
         {
             Reset();
-            if (prizePrefab != null && prizeContainer != null && prizeObject == null)
-            {
-                SpawnPrize();
-            }
-            else
-            {
-                Debug.Log("PRIZE NULL");
-            }
+            // if (prizePrefab != null && prizeContainer != null)
+            // {
+            //     SpawnPrize();
+            // }
+            // else
+            // {
+            //     Debug.Log("PRIZE NULL");
+            // }
         }
-
-        void SpawnPrize()
-        {
-            // If the prizeObject  already exists, just update the results text
-            if (prizeObject == null)
-            {
-                // Otherwise, instantiate the results object
-                prizeObject = Instantiate(prizePrefab, prizeContainer);
-            }
-            else
-            {
-                Debug.Log("PRIZE OBJECT ALREADY EXISTS");
-            }
-
-            prizeObject.SetActive(true);
-        }
+        //         void SpawnPrize()
+        //         {
+        //             // If the prizeObject  already exists, just update the results text
+        //             if (prizeObject == null)
+        //             {
+        //                 // Otherwise, instantiate the results object
+        //                 prizeObject = Instantiate(prizePrefab, prizeContainer);
+        //             }
+        //             else
+        //             {
+        //                 Debug.Log("PRIZE OBJECT ALREADY EXISTS");
+        //             }
+        // 
+        //             prizeObject.SetActive(true);
+        //         }
         public void DestroyInstantiatedObjs()
         {
 

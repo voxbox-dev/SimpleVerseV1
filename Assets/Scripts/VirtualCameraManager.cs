@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using SpatialSys.UnitySDK;
 
@@ -22,6 +20,7 @@ namespace Simpleverse
         void SetCameraPosition(Vector3 position)
         {
             virtualCamera.transform.position = position;
+            Debug.Log("Camera position set to: " + position);
         }
         void SetCameraRotation(Quaternion rotation)
         {
@@ -42,7 +41,7 @@ namespace Simpleverse
             SpatialBridge.cameraService.forceFirstPerson = false;
         }
 
-        public void FocusOnNPC(GameObject targetObj, float interactionDistance)
+        public void FocusOnNPC(GameObject targetObj)
         {
             if (targetObj != null)
             {
@@ -52,18 +51,16 @@ namespace Simpleverse
                 }
                 // Calculate the position in front of the NPC
                 Transform targetsTransform = targetObj.transform;
-                Vector3 targetPosition = targetsTransform.position + targetsTransform.forward;
 
-                // Make the player face the NPC
-                Vector3 lookPos = targetPosition - SpatialBridge.actorService.localActor.avatar.position;
-                Quaternion rotation = Quaternion.LookRotation(lookPos);
-                SpatialBridge.actorService.localActor.avatar.rotation = rotation;
+                // adjust postion and rotation of virtual camera to be in front of the targetObj
+                Vector3 targetPosition = targetsTransform.position + targetsTransform.forward;
+                Vector3 lookPos = targetPosition - virtualCameraPosition;
+                // Make the camera always look at the NPC
+                virtualCamera.transform.LookAt(targetsTransform);
+                // Quaternion rotation = Quaternion.LookRotation(lookPos);
 
                 // Position the camera slightly above and behind the NPC
-                SetCameraPosition(targetsTransform.position + virtualCameraPosition);
-                SetCameraRotation(rotation);
-                // Make the camera always look at the NPC
-                // virtualCamera.transform.LookAt(targetsTransform);
+                SetCameraPosition(targetPosition + virtualCameraPosition);
             }
             else
             {

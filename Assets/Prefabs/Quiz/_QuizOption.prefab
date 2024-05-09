@@ -47,7 +47,7 @@ MonoBehaviour:
   interactText: Select Answer
   iconType: 3
   icon: {fileID: 21300000, guid: 25235877b0a284b98afcd6ab87f71460, type: 3}
-  interactiveRadius: 3
+  interactiveRadius: 6
   visibilityRadius: 10
   onInteractEvent:
     id: 0

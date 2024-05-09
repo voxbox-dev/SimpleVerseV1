@@ -1,10 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
-using SpatialSys.UnitySDK;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 namespace Simpleverse
 {

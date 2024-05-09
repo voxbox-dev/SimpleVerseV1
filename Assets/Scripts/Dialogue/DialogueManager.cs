@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using SpatialSys.UnitySDK;
 using TMPro;
 using UnityEngine;
@@ -33,7 +31,6 @@ namespace Simpleverse
         public void HideDialogue()
         {
             dialogueBoxParent.SetActive(false);
-
         }
         public void ShowDialogue()
         {

@@ -1,5 +1,53 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &254284947002828427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4554383930256963698}
+  - component: {fileID: 6142639504711126855}
+  m_Layer: 0
+  m_Name: NPC_VCam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4554383930256963698
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254284947002828427}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
+  m_LocalPosition: {x: -0.009994864, y: 1.7779993, z: 2.1190019}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3597891383006025810}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
+--- !u!114 &6142639504711126855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254284947002828427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4928b7e4ce3fe4fcaa0a33d97f9ed9a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _priority: 0
+  _fieldOfView: 60
+  _nearClipPlane: 0.1
+  _farClipPlane: 5000
 --- !u!1 &1055884130825475461
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,7 +57,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4976817574564178240}
-  - component: {fileID: 1137836578113075991}
   - component: {fileID: 1590920693740549594}
   m_Layer: 0
   m_Name: _InteractStart
@@ -26,26 +73,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055884130825475461}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.2374, z: -0.083}
+  m_LocalPosition: {x: 0, y: 0.219, z: 0}
   m_LocalScale: {x: 0.5222736, y: 0.2761993, z: 0.45531395}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2419888734237213295}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1137836578113075991
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1055884130825475461}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.9999998, z: 1.3374076}
-  m_Center: {x: 0, y: 0, z: 0.06708362}
 --- !u!114 &1590920693740549594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,6 +202,7 @@ Transform:
   m_Children:
   - {fileID: 2282121254229723871}
   - {fileID: 2419888734237213295}
+  - {fileID: 4554383930256963698}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -184,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speakerName: Coach Sal
-  dialogue: {fileID: 11400000, guid: aee8ec555a6bd4fb6b112e09ec3aaa75, type: 2}
+  dialogue: {fileID: 11400000, guid: f7fdd8ff7165949feb1342b14dbfec1c, type: 2}
   completeTaskID: 1
   onInteractStartEvent:
     m_PersistentCalls:
@@ -202,6 +237,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 8965929442938373450}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 254284947002828427}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -240,6 +287,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 254284947002828427}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7223586242978791974
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,6 +308,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2419888734237213295}
+  - component: {fileID: 4377569533346154035}
   m_Layer: 0
   m_Name: Triggers
   m_TagString: Untagged
@@ -264,15 +324,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7223586242978791974}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.8259997, y: 5.8259997, z: 5.8259997}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -0.124, y: 1.247, z: 0.56}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4976817574564178240}
   - {fileID: 1226078438347872200}
   m_Father: {fileID: 3597891383006025810}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4377569533346154035
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7223586242978791974}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.8494444, y: 0.99999976, z: 0.6092447}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8965929442938373450
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,7 +371,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8965929442938373450}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.001, y: 0.2589, z: -0.0523}
+  m_LocalPosition: {x: 0, y: 0.219, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

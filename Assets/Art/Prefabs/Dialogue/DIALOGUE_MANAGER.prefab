@@ -24,14 +24,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1670540024702470297}
-  m_LocalRotation: {x: 0.1305268, y: -0, z: -0, w: 0.9914448}
+  m_LocalRotation: {x: 0.13052616, y: 0, z: 0, w: 0.9914449}
   m_LocalPosition: {x: -1855.5067, y: -2023.5095, z: -4353.4717}
   m_LocalScale: {x: 986.9717, y: 986.9717, z: 986.9717}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
 --- !u!114 &1670540024702470299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47,4 +47,4 @@ MonoBehaviour:
   dialogueBoxParent: {fileID: 0}
   speaker: {fileID: 0}
   message: {fileID: 0}
-  DialogueBoxPosition: {x: -0.031, y: 2.069, z: 0.082}
+  DialogueBoxPosition: {x: -0.031, y: 2.08, z: 0.082}
