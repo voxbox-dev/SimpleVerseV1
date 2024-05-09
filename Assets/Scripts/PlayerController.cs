@@ -9,6 +9,12 @@ namespace Simpleverse
         private bool isMoveDisabled = false;
 
         // METHODS
+
+        public void TeleportPlayer(Transform targetTransform)
+        {
+            // Teleport the player to the target transform
+            SpatialBridge.actorService.localActor.avatar.SetPositionRotation(targetTransform.position, targetTransform.rotation);
+        }
         public void DisablePlayerMove(bool disableMovement)
         {
             isMoveDisabled = disableMovement;
