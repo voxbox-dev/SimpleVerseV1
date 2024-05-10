@@ -8,8 +8,8 @@ namespace Simpleverse
     {
 
         // Serialized Fields
-        [SerializeField]
-        private GameObject invisibleWall;
+        // [SerializeField]
+        // private GameObject invisibleWall;
         [SerializeField]
         private QuizData quizData;
         [SerializeField]
@@ -81,14 +81,14 @@ namespace Simpleverse
             TriggerStart.SetActive(true);
             TriggerRestart.SetActive(false);
             TriggerClaim.SetActive(false);
-            invisibleWall.SetActive(false);
+            // invisibleWall.SetActive(false);
         }
         public void StartQuiz()
         {
             currQuestion = quizData.questions[currentQuestionIndex];
             currQuestionText = currQuestion.questionText;
             TriggerStart.SetActive(false);
-            invisibleWall.SetActive(true);
+            // invisibleWall.SetActive(true);
             DeactivateAnimations();
 
             if (currQuestion != null)
@@ -195,7 +195,7 @@ namespace Simpleverse
             DestroyInstantiatedObjs();
             DisplayResults();
             ActivateAnimations();
-            invisibleWall.SetActive(false);
+            // invisibleWall.SetActive(false);
         }
 
         public void DisplayResults()

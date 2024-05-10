@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3553459919921599674}
   - component: {fileID: 1270047383633696387}
-  - component: {fileID: 8440453686677413832}
+  - component: {fileID: 6458743089790550648}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -130,7 +130,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &8440453686677413832
+--- !u!114 &6458743089790550648
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,6 +150,18 @@ MonoBehaviour:
     unityEvent:
       m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 3719579684592675641}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 8744359041007231505}
           m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
           m_MethodName: set_material
@@ -158,18 +170,6 @@ MonoBehaviour:
             m_ObjectArgument: {fileID: 2100000, guid: 7862dd6cbe8054519a5d972d7ba4a0c9,
               type: 2}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 3719579684592675641}
-          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_MethodName: Play
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 

@@ -26,16 +26,11 @@ namespace Simpleverse
             countdown = duration;
             // hide the timer model
             HideTimer();
-            OnEndTimer.AddListener(OnEndTimerEvent);
+            OnEndTimer.AddListener(StopTimer);
         }
 
         // Destroy listeners when the object is destroyed or disabled
         void OnDestroy()
-        {
-            OnEndTimer.RemoveAllListeners();
-        }
-
-        void OnDisable()
         {
             OnEndTimer.RemoveAllListeners();
         }
@@ -60,7 +55,6 @@ namespace Simpleverse
                     OnEndTimer?.Invoke();
                 }
             }
-
         }
 
         private void SetPosition()
@@ -95,13 +89,13 @@ namespace Simpleverse
             countdown = duration;
         }
 
-        private void OnEndTimerEvent()
+        public void StopTimer()
         {
             countdown = 0;
             // Disable the timer model and stop the countdown
             HideTimer();
-
             timerStarted = false; // Reset the flag
+            timerEnded = true;
         }
 
         public void ShowTimer()
