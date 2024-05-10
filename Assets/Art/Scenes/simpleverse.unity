@@ -18689,7 +18689,7 @@ MonoBehaviour:
         m_CallState: 2
   TimerModel: {fileID: 48871711}
   TimerTextObject: {fileID: 74068057}
-  TimerPositionOffset: {x: 0, y: 0.15, z: 1.5}
+  TimerPositionOffset: {x: 1.7, y: 0.15, z: 0.2}
 --- !u!1 &1471437641
 GameObject:
   m_ObjectHideFlags: 0

@@ -69,8 +69,8 @@ namespace Simpleverse
             Vector3 playerPosition = SpatialBridge.actorService.localActor.avatar.position;
             Quaternion playerRotation = SpatialBridge.actorService.localActor.avatar.rotation;
             Vector3 forwardDirection = playerRotation * Vector3.forward;
-            // Place timer front of player by offset distance (to put behind player use -TimerPositionOffset.magnitude)
-            TimerModel.transform.position = playerPosition + forwardDirection * TimerPositionOffset.magnitude;
+            // Place timer on the right side of the player by offset distance
+            TimerModel.transform.position = playerPosition + playerRotation * (Vector3.right * TimerPositionOffset.magnitude);
             // adjust height to set above ground
             TimerModel.transform.position = new Vector3(TimerModel.transform.position.x, playerPosition.y + TimerPositionOffset.y, TimerModel.transform.position.z);
 
