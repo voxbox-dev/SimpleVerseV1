@@ -63,11 +63,21 @@ namespace Simpleverse
 
         }
 
-
         private void SetPosition()
         {
-            // Put timer in front of the player
-            TimerModel.transform.position = SpatialBridge.actorService.localActor.avatar.position + TimerPositionOffset;
+            // Get forward facing direction of the player
+            Vector3 playerPosition = SpatialBridge.actorService.localActor.avatar.position;
+            Quaternion playerRotation = SpatialBridge.actorService.localActor.avatar.rotation;
+            Vector3 forwardDirection = playerRotation * Vector3.forward;
+            // Place timer front of player by offset distance (to put behind player use -TimerPositionOffset.magnitude)
+            TimerModel.transform.position = playerPosition + forwardDirection * TimerPositionOffset.magnitude;
+            // adjust height to set above ground
+            TimerModel.transform.position = new Vector3(TimerModel.transform.position.x, playerPosition.y + TimerPositionOffset.y, TimerModel.transform.position.z);
+
+            TimerModel.transform.LookAt(playerPosition);
+
+            // Keep timer flat on the ground
+            TimerModel.transform.rotation = Quaternion.Euler(90, playerRotation.eulerAngles.y, playerRotation.eulerAngles.z);
         }
 
         public void StartTimer()
