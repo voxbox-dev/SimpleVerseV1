@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -121,12 +122,14 @@ namespace Simpleverse
             // If option objects already exist, just update the option texts
             if (optionObjects.Count > 0)
             {
-                for (int i = 0; i < optionObjects.Count; i++)
+                // Ensure that the number of optionObjects matches the number of question.options
+                int count = Math.Min(optionObjects.Count, question.options.Count);
+
+                for (int i = 0; i < count; i++)
                 {
                     QuizOption optionObjectScript = optionObjects[i].GetComponent<QuizOption>();
                     optionObjectScript.SetOption(question.options[i].optionText, i == question.correctAnswerIndex);
                     StartCoroutine(optionObjectScript.DisplayOptionCoroutine(optionObjects[i], i));
-
                 }
             }
             else
@@ -138,7 +141,7 @@ namespace Simpleverse
                     QuizOption optionObjectScript = optionObject.GetComponent<QuizOption>();
                     optionObjectScript.SetOption(question.options[i].optionText, i == question.correctAnswerIndex);
                     StartCoroutine(optionObjectScript.DisplayOptionCoroutine(optionObject, i));
-                    optionObjects.Add(optionObject); ;
+                    optionObjects.Add(optionObject);
                 }
             }
         }
@@ -150,40 +153,43 @@ namespace Simpleverse
 
         private IEnumerator OnOptionSelectedCoroutine(bool isCorrect, float delayBetweenOptions)
         {
-            for (int i = 0; i < optionObjects.Count; i++)
+            if (optionObjects != null)
             {
-                QuizOption optionObjectScript = optionObjects[i].GetComponent<QuizOption>();
-                // Add a delay before starting each coroutine
-                yield return new WaitForSeconds(i * delayBetweenOptions);
-                StartCoroutine(optionObjectScript.HideOptionCoroutine(optionObjects[i], i));
-            }
+                for (int i = 0; i < optionObjects.Count; i++)
+                {
+                    QuizOption optionObjectScript = optionObjects[i]?.GetComponent<QuizOption>();
+                    if (optionObjectScript != null)
+                    {
+                        yield return new WaitForSeconds(i * delayBetweenOptions);
+                        StartCoroutine(optionObjectScript.HideOptionCoroutine(optionObjects[i], i));
+                    }
+                }
 
-            // Wait for the last hide animation to finish
-            yield return new WaitForSeconds(optionObjects.Count * delayBetweenOptions);
+                yield return new WaitForSeconds(optionObjects.Count * delayBetweenOptions);
+            }
 
             if (isCorrect)
             {
-                // add to score 
                 score += 10;
                 Debug.Log("CORRECT" + score);
             }
             else
             {
-                // If the wrong option was selected, save question
-                string question = currQuestion.questionText;
-                wrongQuestions.Add(question);
-                Debug.Log("ADDED WRONG QUESTION: " + question);
+                string question = currQuestion?.questionText;
+                if (!string.IsNullOrEmpty(question))
+                {
+                    wrongQuestions?.Add(question);
+                    Debug.Log("ADDED WRONG QUESTION: " + question);
+                }
             }
 
-            // If there are more questions, go to the next question
-            if (currentQuestionIndex + 1 < quizData.questions.Count)
+            if (quizData != null && quizData.questions != null && currentQuestionIndex + 1 < quizData.questions.Count)
             {
                 currentQuestionIndex++;
                 StartQuiz();
             }
             else
             {
-                // If there are no more questions, end the quiz
                 EndQuiz();
             }
 
@@ -207,13 +213,17 @@ namespace Simpleverse
 
         private int CalculateFinalScore()
         {
+            if (quizData.isScored == false)
+            {
+                return 100;
+            }
             return score * 100 / totalPossibleScore;
         }
 
         private string DetermineResult(int finalScore)
         {
             // If the final score is 100, the quiz is completed
-            if (finalScore == 100)
+            if (finalScore == 100 || quizData.isScored == false)
             {
                 SetClaimActive();
                 TriggerRestart.SetActive(true);

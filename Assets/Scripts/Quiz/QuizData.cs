@@ -9,6 +9,7 @@ namespace Simpleverse
         public string questionText;
         public List<Option> options;
         public int correctAnswerIndex;
+
     }
     [System.Serializable]
     public class Option
@@ -18,6 +19,8 @@ namespace Simpleverse
     [CreateAssetMenu(fileName = "QuizData", menuName = "Quiz/QuizData", order = 1)]
     public class QuizData : ScriptableObject
     {
+        [Tooltip("If this is true, the quiz will be scored. If false, it will be a survey.")]
+        public bool isScored = true;
         public List<Question> questions;
     }
 }
