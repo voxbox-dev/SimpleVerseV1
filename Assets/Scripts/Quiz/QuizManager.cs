@@ -137,11 +137,18 @@ namespace Simpleverse
                 // Otherwise, instantiate the option objects
                 for (int i = 0; i < question.options.Count; i++)
                 {
-                    GameObject optionObject = Instantiate(optionObjectPrefab, optionContainers[i]);
-                    QuizOption optionObjectScript = optionObject.GetComponent<QuizOption>();
-                    optionObjectScript.SetOption(question.options[i].optionText, i == question.correctAnswerIndex);
-                    StartCoroutine(optionObjectScript.DisplayOptionCoroutine(optionObject, i));
-                    optionObjects.Add(optionObject);
+                    if (i < optionContainers.Count) // Check if the index is within the bounds of optionContainers
+                    {
+                        GameObject optionObject = Instantiate(optionObjectPrefab, optionContainers[i]);
+                        QuizOption optionObjectScript = optionObject.GetComponent<QuizOption>();
+                        optionObjectScript.SetOption(question.options[i].optionText, i == question.correctAnswerIndex);
+                        StartCoroutine(optionObjectScript.DisplayOptionCoroutine(optionObject, i));
+                        optionObjects.Add(optionObject);
+                    }
+                    else
+                    {
+                        Debug.LogError("Index out of range: The number of optionContainers is less than the number of options in the question.");
+                    }
                 }
             }
         }
@@ -226,7 +233,7 @@ namespace Simpleverse
             if (finalScore == 100 || quizData.isScored == false)
             {
                 SetClaimActive();
-                TriggerRestart.SetActive(true);
+                TriggerRestart.SetActive(false);
                 // play success audio clip
                 successAudioSource.Play();
                 return "Completed!";
@@ -274,30 +281,7 @@ namespace Simpleverse
         public void ClaimPrize()
         {
             Reset();
-            // if (prizePrefab != null && prizeContainer != null)
-            // {
-            //     SpawnPrize();
-            // }
-            // else
-            // {
-            //     Debug.Log("PRIZE NULL");
-            // }
         }
-        //         void SpawnPrize()
-        //         {
-        //             // If the prizeObject  already exists, just update the results text
-        //             if (prizeObject == null)
-        //             {
-        //                 // Otherwise, instantiate the results object
-        //                 prizeObject = Instantiate(prizePrefab, prizeContainer);
-        //             }
-        //             else
-        //             {
-        //                 Debug.Log("PRIZE OBJECT ALREADY EXISTS");
-        //             }
-        // 
-        //             prizeObject.SetActive(true);
-        //         }
         public void DestroyInstantiatedObjs()
         {
 

@@ -25,7 +25,7 @@ namespace Simpleverse
             // Initialize the countdown to the duration
             countdown = duration;
             // hide the timer model
-            HideTimer();
+            StopTimer();
             OnEndTimer.AddListener(StopTimer);
         }
 
