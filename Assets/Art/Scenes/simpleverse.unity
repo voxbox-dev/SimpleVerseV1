@@ -14861,7 +14861,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &766124458
 Transform:
   m_ObjectHideFlags: 0
@@ -18217,7 +18217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &937923043
 Transform:
   m_ObjectHideFlags: 0
@@ -19129,7 +19129,7 @@ Transform:
   m_Children:
   - {fileID: 298484687}
   m_Father: {fileID: 1674700073}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1026758450
 GameObject:
@@ -21527,6 +21527,75 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1175802242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1175802243}
+  - component: {fileID: 1175802244}
+  m_Layer: 0
+  m_Name: HowTo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1175802243
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175802242}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.826, y: 0.212, z: -4.874}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1674700073}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1175802244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175802242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 679647456a363450ab8d072b2a91f5a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Drive The SS Racer
+  description: 'There are two ways to drive your car:
+
+
+    1. Come to this garage
+    and interact with this spawner
+
+    2. Open your backpack and Use.'
+  backgroundColor: {r: 0, g: 0, b: 0, a: 0.4}
+  foregroundColor: {r: 1, g: 1, b: 1, a: 1}
+  sprite: {fileID: 0}
+  spriteSize: 0.75
+  spriteRectSize: {x: 0, y: 0}
+  textDisplayRadius: 1.7671204
+  markerDisplayRadius: 3.1788712
+  onTextDisplayedEvent:
+    id: 0
+    unityEventIsSynced: 0
+    unityEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    animatorEvent:
+      events: []
+    questEvent:
+      events: []
 --- !u!1001 &1188567952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28538,7 +28607,7 @@ Transform:
   m_Children:
   - {fileID: 1559043988}
   m_Father: {fileID: 1674700073}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1486738004
 GameObject:
@@ -29742,7 +29811,7 @@ Transform:
   m_Children:
   - {fileID: 1352945898}
   m_Father: {fileID: 1674700073}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1604762044
 PrefabInstance:
@@ -30957,7 +31026,7 @@ MonoBehaviour:
               m_IntArgument: 0
               m_FloatArgument: 0
               m_StringArgument: 
-              m_BoolArgument: 0
+              m_BoolArgument: 1
             m_CallState: 2
           - m_Target: {fileID: 445722652}
             m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
@@ -31153,18 +31222,6 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: 
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -31495,6 +31552,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1175802243}
   - {fileID: 1811498385}
   - {fileID: 997693090}
   - {fileID: 1599916144}
@@ -33603,7 +33661,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1674700073}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &1811498387
 CapsuleCollider:
@@ -113887,6 +113945,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 747985317}
     m_Modifications:
+    - target: {fileID: 989943740, guid: 7d008e85f7efa4da191446e29fd783ff, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8496230186483909376, guid: 7d008e85f7efa4da191446e29fd783ff,
         type: 3}
       propertyPath: m_Name
