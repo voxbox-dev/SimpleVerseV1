@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Simpleverse
 {
-    public class StartRaceTrigger : MonoBehaviour
+    public class VehicleCollisionTrigger : MonoBehaviour
     {
         // Assuming 'Vehicles' layer is set to layer 9 as per Spatial's allowed layers
         private const int VehiclesLayer = 9;
