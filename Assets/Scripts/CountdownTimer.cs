@@ -14,6 +14,9 @@ namespace Simpleverse
 
         [SerializeField] private Vector3 TimerPositionOffset;
 
+        [SerializeField] private Position timerPosition = Position.RIGHT;
+
+        private enum Position { BEHIND, RIGHT };
         private bool timerEnded = false;
         private bool timerStarted = false;
 
@@ -27,6 +30,7 @@ namespace Simpleverse
             // hide the timer model
             StopTimer();
             OnEndTimer.AddListener(StopTimer);
+            Debug.Log("Timer Initialized");
         }
 
         // Destroy listeners when the object is destroyed or disabled
@@ -63,6 +67,11 @@ namespace Simpleverse
             Vector3 playerPosition = SpatialBridge.actorService.localActor.avatar.position;
             Quaternion playerRotation = SpatialBridge.actorService.localActor.avatar.rotation;
             Vector3 forwardDirection = playerRotation * Vector3.forward;
+            if (timerPosition == Position.BEHIND)
+            {
+                // Place timer behind the player by offset distance
+                TimerModel.transform.position = TimerModel.transform.position - forwardDirection * TimerPositionOffset.magnitude;
+            }
             // Place timer on the right side of the player by offset distance
             TimerModel.transform.position = playerPosition + playerRotation * (Vector3.right * TimerPositionOffset.magnitude);
             // adjust height to set above ground
@@ -81,7 +90,7 @@ namespace Simpleverse
             {
                 return;
             }
-
+            Debug.Log("Starting Timer");
             // Enable the timer model and start the countdown
             timerEnded = false;
             timerStarted = true; // Set the flag to true
@@ -91,6 +100,7 @@ namespace Simpleverse
 
         public void StopTimer()
         {
+            Debug.Log("Stopping Timer");
             countdown = 0;
             // Disable the timer model and stop the countdown
             HideTimer();
