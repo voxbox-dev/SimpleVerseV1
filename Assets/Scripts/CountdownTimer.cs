@@ -57,6 +57,7 @@ namespace Simpleverse
                     countdown = 0;
                     timerEnded = true;
                     OnEndTimer?.Invoke();
+                    StartTimer();
                 }
             }
         }

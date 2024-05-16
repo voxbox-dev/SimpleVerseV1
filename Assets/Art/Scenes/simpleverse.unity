@@ -8531,6 +8531,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 395075456}
+        m_TargetAssemblyTypeName: Simpleverse.CountdownTimer, Simpleverse
+        m_MethodName: StartTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   TimerModel: {fileID: 795538365}
   TimerTextObject: {fileID: 1548508827}
   TimerPositionOffset: {x: 1.7, y: 0.15, z: 0.2}
@@ -25703,10 +25715,10 @@ MonoBehaviour:
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"AwardCurrencyTrigger","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
-    - {fileID: 1710598268}
+    - {fileID: 1641724890}
     - {fileID: 1811498384}
     - {fileID: 1641724890}
-    - {fileID: 449053564}
+    - {fileID: 854229737}
 --- !u!114 &1436830475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30074,9 +30086,6 @@ MonoBehaviour:
   - type: 1
     id: 4w2bzfkjgjp15fuklamyr
     amount: 1
-  - type: 1
-    id: 5zu26y9y69wco1f1htjac
-    amount: 20
   tasks:
   - id: 1
     name: Consult in Entrepreneur Corner
