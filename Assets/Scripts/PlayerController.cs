@@ -7,8 +7,32 @@ namespace Simpleverse
     {
         // VARIABLES
         private bool isMoveDisabled = false;
+        private bool hasSVCitizenBadge = false ;
+        [SerializeField] private GameObject raceTrackPortal;
 
         // METHODS
+        public void LoadSVCitizenBadge()    
+        {
+            SpatialBridge.userWorldDataStoreService.GetVariable("hasSVCitizenBadge", false).SetCompletedEvent((response) => {
+                //once the GetVariable request is completed this code will run.
+                hasSVCitizenBadge = response.boolValue;
+                Debug.Log("Does Player have  SV Citizen Badge?: " + hasSVCitizenBadge);
+                
+                // If player has SV Citizen Badge, enable
+                if (hasSVCitizenBadge)
+                {
+                    raceTrackPortal.SetActive(true);
+                }
+            });
+        }
+
+        public void SaveSVCitizenBadge(bool hasSVCitizenBadge)
+        {
+            SpatialBridge.userWorldDataStoreService.SetVariable("hasSVCitizenBadge", hasSVCitizenBadge).SetCompletedEvent((response) => {
+                //once the SetVariable request is completed this code will run.
+                Debug.Log("SV Citizen Badge saved: " + hasSVCitizenBadge);
+            });
+        }
 
         public void TeleportPlayer(Transform targetTransform)
         {

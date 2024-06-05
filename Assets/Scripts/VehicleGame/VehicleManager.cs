@@ -44,6 +44,13 @@ namespace Simpleverse
             Debug.Log("OnDestroy called");
             Destroy(vehicleObject);
         }
+        
+        public void DestroyVehicle()
+        {
+            if (vehicleObject is null) return;
+            Debug.Log("Destroying vehicle");
+            Destroy(vehicleObject);
+        }
 
         public void Spawn()
         {
