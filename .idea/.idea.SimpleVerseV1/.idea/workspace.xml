@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d456dc17-30cf-49c7-9534-58f60a3890c4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleVerseV1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleVerseV1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefabs/Q8_Book.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Prefabs/Q8_Book.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Scenes/simpleverse.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Scenes/simpleverse.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db" afterDir="false" />
-    </list>
+    <list default="true" id="d456dc17-30cf-49c7-9534-58f60a3890c4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,6 +110,7 @@
       <workItem from="1716489740355" duration="27178000" />
       <workItem from="1718738792061" duration="599000" />
       <workItem from="1718745110247" duration="1440000" />
+      <workItem from="1718825846911" duration="1853000" />
     </task>
     <servers />
   </component>
