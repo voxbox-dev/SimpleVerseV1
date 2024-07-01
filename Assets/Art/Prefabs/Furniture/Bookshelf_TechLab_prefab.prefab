@@ -647,6 +647,7 @@ GameObject:
   - component: {fileID: 7928283428834028646}
   - component: {fileID: 3441186509626540745}
   - component: {fileID: 3002211777439082052}
+  - component: {fileID: 7537295963523770304}
   m_Layer: 0
   m_Name: ShelfStructure
   m_TagString: Untagged
@@ -719,6 +720,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7537295963523770304
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3723719961801362330}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3768549710972568040, guid: d63f247fee683084aba64c7a86a26265, type: 3}
 --- !u!1 &5345160542579231247
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,6 +1027,7 @@ GameObject:
   - component: {fileID: 321060130658480870}
   - component: {fileID: 6468669827765202825}
   - component: {fileID: 1757035371531065133}
+  - component: {fileID: 3656206700938578358}
   m_Layer: 0
   m_Name: Shelves_body
   m_TagString: Untagged
@@ -1084,6 +1100,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3656206700938578358
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7301427482787452865}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3277056140333134009, guid: d63f247fee683084aba64c7a86a26265, type: 3}
 --- !u!1 &7746007938875430598
 GameObject:
   m_ObjectHideFlags: 0
