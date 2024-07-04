@@ -22,7 +22,7 @@ namespace Simpleverse
                 Transform positionToReplace = billboardPositions[positionIndex];
                 GameObject questBillboardPrefab = aimoduleQuestSO.questBillboardPrefabs[questBillboardIndex];
 
-                // Replace the billboard
+                // Replace the billboard. Holds a reference to the new billboard
                 GameObject newBillboard = Instantiate(questBillboardPrefab, positionToReplace.position, positionToReplace.rotation, positionToReplace);
                 positionToReplace.gameObject.SetActive(false);
 
