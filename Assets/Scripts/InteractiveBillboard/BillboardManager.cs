@@ -12,26 +12,28 @@ namespace Simpleverse
 
         private void Awake()
         {
-            Debug.Log("Awake called");
+            Debug.Log("Billboard Manager Awake called");
             if (Instance != null && Instance != this)
             {
-                Debug.Log("Destroying duplicate instance of VehicleManager");
                 Destroy(this);
+                // Debug.Log("Destroying duplicate instance of BillboardManager");
             }
             else
             {
-                Debug.Log("Setting instance of VehicleManager");
                 Instance = this;
-                InitializeBillboards();
+                // Debug.Log("Setting instance of BillboardManager");
+                // InitializeBillboards(billboardPositions);
             }
         }
 
-        private void InitializeBillboards()
-        {
-            foreach (Transform position in billboardPositions)
-            {
-                Instantiate(defaultBillboardPrefab, position.position, position.rotation, position);
-            }
-        }
+        // public void InitializeBillboards(List<GameObject> billboards, GameObject billboardPrefab)
+        // {
+        //     foreach (GameObject billboard in billboards)
+        //     {
+        //         Debug.Log("Initializing Billboard...");
+        //         Instantiate(billboardPrefab, billboard.transform.position, billboard.transform.rotation);
+        //     }
+        // }
+       
     }
 }

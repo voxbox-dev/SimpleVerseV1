@@ -8,47 +8,81 @@ namespace Simpleverse
     {
         [SerializeField] private AIModuleQuestSO aimoduleQuestSO;
 
-        private List<Transform> updatedBillboardPositions = new List<Transform>();
-
-        public void UpdateBillboards(int numberOfBillboardsToUpdate)
+        public void PlaceBillboards(int numberOfBillboardsToPlace)
         {
-            List<Transform> billboardPositions = BillboardManager.Instance.billboardPositions;
-            // Randomly select and replace X billboards with X billboards from the quest
-            for (int i = 0; i < numberOfBillboardsToUpdate; i++)
+            if (aimoduleQuestSO.questBillboardPrefabs == null || aimoduleQuestSO.questBillboardPrefabs.Count == 0)
             {
-                int positionIndex = Random.Range(0, billboardPositions.Count);
-                int questBillboardIndex = Random.Range(0, aimoduleQuestSO.questBillboardPrefabs.Count);
+                Debug.LogError("No quest billboard prefabs available.");
+                return;
+            }
 
-                Transform positionToReplace = billboardPositions[positionIndex];
-                GameObject questBillboardPrefab = aimoduleQuestSO.questBillboardPrefabs[questBillboardIndex];
+            List<Transform> allPositions = BillboardManager.Instance.billboardPositions;
+            if (allPositions == null || allPositions.Count == 0)
+            {
+                Debug.LogError("No billboard positions available.");
+                return;
+            }
 
-                // Replace the billboard. Holds a reference to the new billboard
-                GameObject newBillboard = Instantiate(questBillboardPrefab, positionToReplace.position, positionToReplace.rotation, positionToReplace);
-                positionToReplace.gameObject.SetActive(false);
+            int positionsToPlace = Mathf.Min(numberOfBillboardsToPlace, allPositions.Count, aimoduleQuestSO.questBillboardPrefabs.Count);
 
-                // Keep track of updated billboard positions
-                updatedBillboardPositions.Add(positionToReplace);
+            // Shuffle the list of positions
+            for (int i = 0; i < allPositions.Count; i++)
+            {
+                Transform temp = allPositions[i];
+                int randomIndex = Random.Range(i, allPositions.Count);
+                allPositions[i] = allPositions[randomIndex];
+                allPositions[randomIndex] = temp;
+            }
+
+            // Create a temporary list of prefabs to track which have been placed
+            List<GameObject> availablePrefabs = new List<GameObject>(aimoduleQuestSO.questBillboardPrefabs);
+
+            for (int i = 0; i < positionsToPlace; i++)
+            {
+                Transform position = allPositions[i];
+                int prefabIndex = Random.Range(0, availablePrefabs.Count);
+                GameObject questBillboardPrefab = availablePrefabs[prefabIndex];
+
+                Instantiate(questBillboardPrefab, position.position, position.rotation, position);
+
+                // Remove the placed prefab from the list to avoid duplicates
+                availablePrefabs.RemoveAt(prefabIndex);
+
+                // If we've placed all unique prefabs, break out of the loop
+                if (availablePrefabs.Count == 0)
+                {
+                    Debug.LogWarning("All unique prefabs have been placed.");
+                    break;
+                }
             }
         }
 
+
         public void ResetBillboards()
         {
-            // Revert the changed billboards with defaultBillboardPrefab
-            foreach (Transform updatedPosition in updatedBillboardPositions)
+            // Check if billboardPositions is null or empty
+            if (BillboardManager.Instance.billboardPositions == null || BillboardManager.Instance.billboardPositions.Count == 0)
             {
-                updatedPosition.gameObject.SetActive(true);
-                // Instantiate the default prefab at the position
-                Instantiate(BillboardManager.Instance.defaultBillboardPrefab, updatedPosition.position, updatedPosition.rotation, updatedPosition);
+                Debug.LogWarning("No billboard positions available to reset.");
+                return;
+            }
 
-                // Destroy the quest billboard
-                foreach (Transform child in updatedPosition)
+            foreach (Transform position in BillboardManager.Instance.billboardPositions)
+            {
+                // Use a backward loop for safe removal of children during iteration
+                for (int i = position.childCount - 1; i >= 0; i--)
                 {
-                    Destroy(child.gameObject);
+                    Transform child = position.GetChild(i);
+#if UNITY_EDITOR
+                    // Use DestroyImmediate in the editor
+                    DestroyImmediate(child.gameObject);
+#else
+            Destroy(child.gameObject);
+#endif
                 }
             }
 
-            // Clear the list after resetting
-            updatedBillboardPositions.Clear();
+            Debug.Log("Billboards have been reset.");
         }
     }
 }
