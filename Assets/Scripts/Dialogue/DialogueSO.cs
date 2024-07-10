@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Simpleverse
 {
-    [CreateAssetMenu(fileName = "New Dialogue", menuName = " Dialogue/Dialogue Asset")]
+    [CreateAssetMenu(fileName = "New Dialogue", menuName = "Dialogue/Dialogue Asset")]
     public class DialogueSO : ScriptableObject
     {
         public int RootNodeID;
