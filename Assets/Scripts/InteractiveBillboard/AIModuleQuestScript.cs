@@ -61,15 +61,18 @@ namespace Simpleverse
             for (int i = 0; i < positionsToPlace; i++)
             {
                 GameObject prefabToPlace = i < aimoduleQuestSO.questBillboardPrefabs.Count ? aimoduleQuestSO.questBillboardPrefabs[i] : defaultPrefab;
-                Instantiate(prefabToPlace, allPositions[i].position, allPositions[i].rotation);
+                GameObject instantiatedPrefab = Instantiate(prefabToPlace, allPositions[i].position, allPositions[i].rotation);
 
-                instantiatedBillboards.Add(prefabToPlace);
+                instantiatedBillboards.Add(instantiatedPrefab);
             }
 
             // If there are still positions left after placing the specified number of billboards, fill them with the default prefab
             for (int i = positionsToPlace; i < allPositions.Count; i++)
             {
-                Instantiate(defaultPrefab, allPositions[i].position, allPositions[i].rotation);
+                GameObject prefabToPlace = defaultPrefab;
+                GameObject instantiatedPrefab = Instantiate(prefabToPlace, allPositions[i].position, allPositions[i].rotation);
+
+                instantiatedBillboards.Add(instantiatedPrefab);
             }
         }
 
@@ -80,11 +83,7 @@ namespace Simpleverse
             {
                 if (billboard != null)
                 {
-#if UNITY_EDITOR
-                    DestroyImmediate(billboard);
-#else
-                Destroy(billboard);
-#endif
+                    Destroy(billboard);
                 }
             }
             instantiatedBillboards.Clear(); // Clear the list after destroying all objects
