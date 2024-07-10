@@ -7,7 +7,8 @@ namespace Simpleverse
     public class BillboardManager : MonoBehaviour
     {
         public static BillboardManager Instance { get; private set; }
-        public GameObject defaultBillboardPrefab;
+        [SerializeField]
+        private GameObject defaultBillboardPrefab;
         public List<Transform> billboardPositions; // Assign in-scene billboards here in the inspector
 
         private void Awake()
@@ -25,6 +26,11 @@ namespace Simpleverse
                 // InitializeBillboards(billboardPositions);
             }
         }
+
+        public GameObject DefaultBillboardPrefab
+    {
+        get { return defaultBillboardPrefab; }
+    }
 
         // public void InitializeBillboards(List<GameObject> billboards, GameObject billboardPrefab)
         // {

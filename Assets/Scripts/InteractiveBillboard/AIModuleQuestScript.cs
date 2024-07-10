@@ -7,9 +7,17 @@ namespace Simpleverse
     public class AIModuleQuestScript : MonoBehaviour
     {
         [SerializeField] private AIModuleQuestSO aimoduleQuestSO;
+        private List<GameObject> instantiatedBillboards = new List<GameObject>();
+
 
         public void PlaceBillboards(int numberOfBillboardsToPlace)
         {
+            if (BillboardManager.Instance == null)
+            {
+                Debug.LogError("BillboardManager instance is not available.");
+                return;
+            }
+
             if (aimoduleQuestSO.questBillboardPrefabs == null || aimoduleQuestSO.questBillboardPrefabs.Count == 0)
             {
                 Debug.LogError("No quest billboard prefabs available.");
@@ -23,7 +31,23 @@ namespace Simpleverse
                 return;
             }
 
-            int positionsToPlace = Mathf.Min(numberOfBillboardsToPlace, allPositions.Count, aimoduleQuestSO.questBillboardPrefabs.Count);
+            GameObject defaultPrefab = BillboardManager.Instance.DefaultBillboardPrefab;
+            if (defaultPrefab == null)
+            {
+                Debug.LogError("Default billboard prefab is not set in BillboardManager.");
+                return;
+            }
+
+
+            if (allPositions == null || allPositions.Count == 0)
+            {
+                Debug.LogError("No positions available for placing billboards.");
+                return;
+            }
+
+            // int positionsToPlace = Mathf.Min(numberOfBillboardsToPlace, allPositions.Count, aimoduleQuestSO.questBillboardPrefabs.Count + 1); // +1 for the default prefab
+
+            int positionsToPlace = Mathf.Min(numberOfBillboardsToPlace, allPositions.Count);
 
             // Shuffle the list of positions
             for (int i = 0; i < allPositions.Count; i++)
@@ -34,53 +58,36 @@ namespace Simpleverse
                 allPositions[randomIndex] = temp;
             }
 
-            // Create a temporary list of prefabs to track which have been placed
-            List<GameObject> availablePrefabs = new List<GameObject>(aimoduleQuestSO.questBillboardPrefabs);
-
             for (int i = 0; i < positionsToPlace; i++)
             {
-                Transform position = allPositions[i];
-                int prefabIndex = Random.Range(0, availablePrefabs.Count);
-                GameObject questBillboardPrefab = availablePrefabs[prefabIndex];
+                GameObject prefabToPlace = i < aimoduleQuestSO.questBillboardPrefabs.Count ? aimoduleQuestSO.questBillboardPrefabs[i] : defaultPrefab;
+                Instantiate(prefabToPlace, allPositions[i].position, allPositions[i].rotation);
 
-                Instantiate(questBillboardPrefab, position.position, position.rotation, position);
+                instantiatedBillboards.Add(prefabToPlace);
+            }
 
-                // Remove the placed prefab from the list to avoid duplicates
-                availablePrefabs.RemoveAt(prefabIndex);
-
-                // If we've placed all unique prefabs, break out of the loop
-                if (availablePrefabs.Count == 0)
-                {
-                    Debug.LogWarning("All unique prefabs have been placed.");
-                    break;
-                }
+            // If there are still positions left after placing the specified number of billboards, fill them with the default prefab
+            for (int i = positionsToPlace; i < allPositions.Count; i++)
+            {
+                Instantiate(defaultPrefab, allPositions[i].position, allPositions[i].rotation);
             }
         }
 
 
         public void ResetBillboards()
         {
-            // Check if billboardPositions is null or empty
-            if (BillboardManager.Instance.billboardPositions == null || BillboardManager.Instance.billboardPositions.Count == 0)
+            foreach (var billboard in instantiatedBillboards)
             {
-                Debug.LogWarning("No billboard positions available to reset.");
-                return;
-            }
-
-            foreach (Transform position in BillboardManager.Instance.billboardPositions)
-            {
-                // Use a backward loop for safe removal of children during iteration
-                for (int i = position.childCount - 1; i >= 0; i--)
+                if (billboard != null)
                 {
-                    Transform child = position.GetChild(i);
 #if UNITY_EDITOR
-                    // Use DestroyImmediate in the editor
-                    DestroyImmediate(child.gameObject);
+                    DestroyImmediate(billboard);
 #else
-            Destroy(child.gameObject);
+                Destroy(billboard);
 #endif
                 }
             }
+            instantiatedBillboards.Clear(); // Clear the list after destroying all objects
 
             Debug.Log("Billboards have been reset.");
         }
