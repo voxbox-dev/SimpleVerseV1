@@ -1,13 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
+using SpatialSys.UnitySDK;
 using UnityEngine;
 
 namespace Simpleverse
 {
     public class AIModuleQuestScript : MonoBehaviour
     {
-        [SerializeField] private AIModuleQuestSO aimoduleQuestSO;
+        [SerializeField] private AIModuleQuestSO aiModuleQuestSO;
+        [SerializeField] private ulong questRewardAmount = 50;
         private List<GameObject> instantiatedBillboards = new List<GameObject>();
+
+       
+        public void AwardQuestCurrency()
+        {
+            if (questRewardAmount <= 0)
+            {
+                Debug.LogError("Quest reward amount is not set.");
+                return;
+            }
+            bool awardSucceeded = SpatialBridge.inventoryService.AwardWorldCurrency(questRewardAmount).succeeded;
+            if (awardSucceeded)
+            {
+                Debug.Log("Player has been awarded " + questRewardAmount + " currency.");
+            }
+            else
+            {
+                Debug.LogError("Failed to award player currency.");
+            }
+        }
 
 
         public void PlaceBillboards(int numberOfBillboardsToPlace)
@@ -18,7 +39,7 @@ namespace Simpleverse
                 return;
             }
 
-            if (aimoduleQuestSO.questBillboardPrefabs == null || aimoduleQuestSO.questBillboardPrefabs.Count == 0)
+            if (aiModuleQuestSO.questBillboardPrefabs == null || aiModuleQuestSO.questBillboardPrefabs.Count == 0)
             {
                 Debug.LogError("No quest billboard prefabs available.");
                 return;
@@ -60,7 +81,7 @@ namespace Simpleverse
 
             for (int i = 0; i < positionsToPlace; i++)
             {
-                GameObject prefabToPlace = i < aimoduleQuestSO.questBillboardPrefabs.Count ? aimoduleQuestSO.questBillboardPrefabs[i] : defaultPrefab;
+                GameObject prefabToPlace = i < aiModuleQuestSO.questBillboardPrefabs.Count ? aiModuleQuestSO.questBillboardPrefabs[i] : defaultPrefab;
                 GameObject instantiatedPrefab = Instantiate(prefabToPlace, allPositions[i].position, allPositions[i].rotation);
 
                 instantiatedBillboards.Add(instantiatedPrefab);
