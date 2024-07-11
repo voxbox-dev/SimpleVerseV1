@@ -1,5 +1,134 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &31862584318542731
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6354282442995837779}
+  - component: {fileID: 2353882060934727238}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6354282442995837779
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31862584318542731}
+  m_LocalRotation: {x: -0, y: -0.60876125, z: -0, w: 0.79335356}
+  m_LocalPosition: {x: 275.99942, y: 68.1499, z: -37.227314}
+  m_LocalScale: {x: 0.8807955, y: 1.613667, z: 9.903638}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8752566448206273808}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &2353882060934727238
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31862584318542731}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -1007645819942920252, guid: 0461beb79fbfa4735867cac3f1f81cd2,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: dea3875d5ffee403facb00484bff22e5, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.91
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &200104569787640186
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,7 +320,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4296376702375270061}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.674}
+  m_LocalPosition: {x: 0, y: 0, z: 0.6641147}
   m_LocalScale: {x: 1.4285716, y: 1.4285715, z: 1.4285716}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -230,7 +359,7 @@ MonoBehaviour:
   sprite: {fileID: 0}
   spriteSize: 0.75
   spriteRectSize: {x: 0, y: 0}
-  textDisplayRadius: 3
+  textDisplayRadius: 7
   markerDisplayRadius: 8
   onTextDisplayedEvent:
     id: 0
@@ -241,10 +370,7 @@ MonoBehaviour:
     animatorEvent:
       events: []
     questEvent:
-      events:
-      - questID: 11
-        questEventType: 3
-        taskID: 2
+      events: []
 --- !u!1 &5263096809015020057
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +466,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4433141555895490203, guid: c8cda49ecb4bd3947818a2f9dc3f7e52, type: 3}
 --- !u!1 &5491127867737303808
@@ -531,7 +657,10 @@ MonoBehaviour:
     animatorEvent:
       events: []
     questEvent:
-      events: []
+      events:
+      - questID: 11
+        questEventType: 3
+        taskID: 2
   onEnterEvent:
     id: 0
     unityEventIsSynced: 0
@@ -585,6 +714,7 @@ Transform:
   - {fileID: 6438003872452892768}
   - {fileID: 7869163816843709914}
   - {fileID: 5935221246406281262}
+  - {fileID: 6354282442995837779}
   m_Father: {fileID: 1641806293534744240}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1005,3 +1135,4 @@ MonoBehaviour:
   triggerView: {fileID: 6737070738202724990}
   triggerExit: {fileID: 5935221246406281261}
   billboardUI: {fileID: 4296376702375270061}
+  audioObj: {fileID: 31862584318542731}

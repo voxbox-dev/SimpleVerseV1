@@ -8,7 +8,7 @@ namespace Simpleverse
     public class BillboardScript : MonoBehaviour
     {
         [SerializeField]
-        private GameObject virtualCamera, triggerView, triggerExit, billboardUI;
+        private GameObject virtualCamera, triggerView, triggerExit, billboardUI, audioObj;
 
         private PlayerController playerController;
 
@@ -33,10 +33,10 @@ namespace Simpleverse
             billboardUI.SetActive(false);
             // hide billboard view button
             triggerView.SetActive(false);
-
         }
 
-        public void OnEndInteract() {
+        public void OnEndInteract()
+        {
             Debug.Log("End interaction with billboard");
             // enable player movement
             playerController.DisablePlayerMove(false);
@@ -46,8 +46,13 @@ namespace Simpleverse
             triggerExit.SetActive(false);
             // show the billboard UI
             billboardUI.SetActive(true);
-            // show billboard view button
-            triggerView.SetActive(true);
+            // hide billboard view button - to prevent double task progress
+            triggerView.SetActive(false);
+            // if audioClip play audio clip, else do nothing
+            if (audioObj != null)
+            {
+                audioObj.GetComponent<AudioSource>().Play();
+            }
         }
     }
 }
