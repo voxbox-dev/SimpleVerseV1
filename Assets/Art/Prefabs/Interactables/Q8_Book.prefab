@@ -9998,9 +9998,9 @@ MonoBehaviour:
   backgroundColor: {r: 0, g: 0, b: 0, a: 0.93333334}
   foregroundColor: {r: 1, g: 1, b: 1, a: 1}
   sprite: {fileID: 21300000, guid: 5ad184bfcb93c41f68fd9bd10d931378, type: 3}
-  spriteSize: 0.75
-  spriteRectSize: {x: 150, y: 85.69336}
-  textDisplayRadius: 3
+  spriteSize: 0.373
+  spriteRectSize: {x: 74.6, y: 42.618164}
+  textDisplayRadius: 5.6899986
   markerDisplayRadius: 6
   onTextDisplayedEvent:
     id: 0
@@ -15080,7 +15080,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8497644676050964965
 Transform:
   m_ObjectHideFlags: 0
