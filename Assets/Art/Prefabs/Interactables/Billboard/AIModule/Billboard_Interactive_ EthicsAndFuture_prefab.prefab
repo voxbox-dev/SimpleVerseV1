@@ -339,10 +339,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679647456a363450ab8d072b2a91f5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: Ethics and Future
-  description: "Ethics and Future: \nResponsible AI development is important as AI
-    continues to grow and impact society. It's like being a superhero and using your
-    powers for good.\n\nKey Takeaway: Responsible AI development is crucial."
+  title: <size=24px>Ethics and Future
+  description: "<size=20px>Ethics and Future: \nResponsible AI development is important
+    as AI continues to grow and impact society. It's like being a superhero and using
+    your powers for good.\n\n<b>Key Takeaway: Responsible AI development is crucial."
   titleFontOverride:
     overrideFont: 0
     font: {fileID: 0}

@@ -210,13 +210,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679647456a363450ab8d072b2a91f5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: ' Healthcare'
-  description: 'AI helps doctors diagnose diseases and plan treatments. It''s like
-    having a super-smart doctor who can remember every medical journal ever written
+  title: ' <size=24px>Healthcare'
+  description: '<size=20px>AI helps doctors diagnose diseases and plan treatments.
+    It''s like having a super-smart doctor who can remember every medical journal
+    ever written
 
 
-    Key
-    Takeaway: AI helps in healthcare.'
+    <b>Key Takeaway: AI helps in healthcare.'
   titleFontOverride:
     overrideFont: 0
     font: {fileID: 0}

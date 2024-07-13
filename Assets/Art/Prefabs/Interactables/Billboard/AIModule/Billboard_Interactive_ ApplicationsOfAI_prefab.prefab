@@ -339,13 +339,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679647456a363450ab8d072b2a91f5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: " Applications of AI\t"
-  description: 'AI is used in voice assistants, recommendations, self-driving cars,
-    and healthcare. It''s like having a personal assistant, a movie picker, and a
-    driver all in one.
+  title: "<size=24px>Applications of AI\t\t"
+  description: '<size=20px>AI is used in voice assistants, recommendations, self-driving
+    cars, and healthcare. It''s like having a personal assistant, a movie picker,
+    and a driver all in one.
 
 
-    Key Takeaway: AI is used in many fields.'
+    <b>Key Takeaway: AI is used in many fields.'
   titleFontOverride:
     overrideFont: 0
     font: {fileID: 0}

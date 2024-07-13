@@ -339,13 +339,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679647456a363450ab8d072b2a91f5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: "Summary of AI\t"
-  description: 'AI is when computers act like humans, learning from data and helping
-    in many areas. It''s like giving your computer a brain.
+  title: "<size=24px>Summary of AI\t"
+  description: '<size=20px>AI is when computers act like humans, learning from data
+    and helping in many areas. It''s like giving your computer a brain.
 
 
-    Key Takeaway: AI
-    simulates human intelligence.'
+    <b>Key
+    Takeaway: AI simulates human intelligence.'
   titleFontOverride:
     overrideFont: 0
     font: {fileID: 0}

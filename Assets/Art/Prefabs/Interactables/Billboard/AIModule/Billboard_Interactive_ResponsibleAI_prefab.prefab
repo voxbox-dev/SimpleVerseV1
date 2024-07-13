@@ -339,12 +339,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679647456a363450ab8d072b2a91f5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: ' Responsible AI'
-  description: 'Responsible AI means making sure AI is fair and transparent. It''s
-    like having clear rules in a game so everyone knows what''s going on.
+  title: <size=24px>Responsible AI
+  description: '<size=20px>Responsible AI means making sure AI is fair and transparent.
+    It''s like having clear rules in a game so everyone knows what''s going on.
 
 
-    Key
+    <b>Key
     Takeaway: Responsible AI is fair and transparent.'
   titleFontOverride:
     overrideFont: 0

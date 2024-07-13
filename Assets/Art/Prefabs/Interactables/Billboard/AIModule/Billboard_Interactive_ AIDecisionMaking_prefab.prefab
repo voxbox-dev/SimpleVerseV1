@@ -339,13 +339,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679647456a363450ab8d072b2a91f5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: AI Decision Making
-  description: 'AI uses neural networks to recognize patterns and make decisions.
-    It''s like recognizing your friend''s voice in a crowded room.
+  title: "<size=24px>AI Decision Making\t"
+  description: '<size=20px>AI uses neural networks to recognize patterns and make
+    decisions. It''s like recognizing your friend''s voice in a crowded room.
 
 
-    Key Takeaway:
-    Neural networks help AI recognize patterns.
+    <b>Key
+    Takeaway: Neural networks help AI recognize patterns.
 
 '
   titleFontOverride:

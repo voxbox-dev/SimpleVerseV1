@@ -339,13 +339,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679647456a363450ab8d072b2a91f5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: ' Bias in AI'
-  description: 'AI can be biased if it learns from biased data, leading to unfair
-    outcomes. It''s like only listening to one side of the story and making decisions
-    based on that.
+  title: <size=24px>Bias in AI
+  description: '<size=20px>AI can be biased if it learns from biased data, leading
+    to unfair outcomes. It''s like only listening to one side of the story and making
+    decisions based on that.
 
 
-    Key Takeaway: AI can have biases from data.'
+    <b>Key Takeaway: AI can have biases from data.'
   titleFontOverride:
     overrideFont: 0
     font: {fileID: 0}

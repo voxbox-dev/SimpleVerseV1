@@ -339,13 +339,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679647456a363450ab8d072b2a91f5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: " Societal Impact\t\t"
-  description: 'AI will keep changing our world, so we need to think about its effects.
-    It''s like discovering a new superpower and figuring out how to use it responsibly.
+  title: "<size=24px>Societal Impact\t\t"
+  description: '<size=20px>AI will keep changing our world, so we need to think about
+    its effects. It''s like discovering a new superpower and figuring out how to
+    use it responsibly.
 
 
-    Key
-    Takeaway: AI changes our world.'
+    <b>Key Takeaway: AI changes our world.'
   titleFontOverride:
     overrideFont: 0
     font: {fileID: 0}

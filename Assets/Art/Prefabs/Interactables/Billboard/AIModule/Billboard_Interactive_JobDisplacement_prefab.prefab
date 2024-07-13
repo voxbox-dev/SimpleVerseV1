@@ -339,13 +339,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679647456a363450ab8d072b2a91f5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: Job Displacement
-  description: 'AI can do some jobs that people do, which might cause job losses.
-    Imagine robots taking over all the boring chores at home, but also some jobs
-    too.
+  title: <size=24px>Job Displacement
+  description: '<size=20px>AI can do some jobs that people do, which might cause
+    job losses. Imagine robots taking over all the boring chores at home, but also
+    some jobs too.
 
 
-    Key Takeaway: AI can cause job displacement.'
+    <b>Key Takeaway: AI can cause job displacement.'
   titleFontOverride:
     overrideFont: 0
     font: {fileID: 0}

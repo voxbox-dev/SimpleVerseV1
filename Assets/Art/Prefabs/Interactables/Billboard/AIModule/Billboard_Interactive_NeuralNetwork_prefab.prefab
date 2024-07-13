@@ -339,12 +339,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679647456a363450ab8d072b2a91f5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: Neural Networks
-  description: 'Neural networks are like webs of connected nodes, inspired by the
-    human brain. Imagine a spider web that catches all the important information.
+  title: <size=24px>Neural Networks
+  description: '<size=20px>Neural networks are like webs of connected nodes, inspired
+    by the human brain. Imagine a spider web that catches all the important information.
 
 
-    Key
+    <b>Key
     Takeaway: Neural networks are inspired by the brain.'
   titleFontOverride:
     overrideFont: 0
