@@ -339,16 +339,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679647456a363450ab8d072b2a91f5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: "<size=24px>AI in Robotics\t"
-  description: '<size=20px>Personalized Learning
+  title: <size=24px>Personalized Learning
+  description: '<size=20px>AI helps create personalized learning experiences tailored
+    to each student. Imagine a teacher who knows exactly what you need to learn next.
 
 
-    AI helps create personalized
-    learning experiences tailored to each student. Imagine a teacher who knows exactly
-    what you need to learn next.
-
-
-    <b>Key Takeaway: AI personalizes learning.'
+    <b>Key
+    Takeaway: AI personalizes learning.'
   titleFontOverride:
     overrideFont: 0
     font: {fileID: 0}
