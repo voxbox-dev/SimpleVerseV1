@@ -210,13 +210,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679647456a363450ab8d072b2a91f5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: "Layers in Neural Networks\t\t\t"
-  description: 'Each layer in a neural network processes data and passes it to the
-    next layer. Think of it like passing notes in class, but the notes are super
-    smart.
+  title: "<size=24px>Layers in Neural Networks\t\t\t"
+  description: '<size=20px>Each layer in a neural network processes data and passes
+    it to the next layer. Think of it like passing notes in class, but the notes
+    are super smart.
 
 
-    Key Takeaway: Neural network layers process data in steps.'
+    <b>Key Takeaway: Neural network layers process data in
+    steps.'
   titleFontOverride:
     overrideFont: 0
     font: {fileID: 0}

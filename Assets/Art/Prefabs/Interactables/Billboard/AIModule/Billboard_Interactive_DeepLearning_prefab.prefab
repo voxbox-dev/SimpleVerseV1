@@ -339,13 +339,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679647456a363450ab8d072b2a91f5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: Deep Learning
-  description: 'Deep learning uses neural networks with many layers to understand
-    complex data. It''s like stacking multiple levels in a video game to unlock the
-    final boss.
+  title: <size=24px>Deep Learning
+  description: '<size=20px>Deep learning uses neural networks with many layers to
+    understand complex data. It''s like stacking multiple levels in a video game
+    to unlock the final boss.
 
 
-    Key Takeaway: Deep learning uses many layers.'
+    <b>Key Takeaway: Deep learning uses many layers.'
   titleFontOverride:
     overrideFont: 0
     font: {fileID: 0}

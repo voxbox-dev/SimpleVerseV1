@@ -210,13 +210,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679647456a363450ab8d072b2a91f5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: Recommendation Systems
-  description: 'AI helps Netflix and YouTube suggest videos based on what you''ve
-    watched before. It''s why you end up binge-watching shows you never knew you
-    needed.
+  title: <size=24px>Recommendation Systems
+  description: '<size=20px>AI helps Netflix and YouTube suggest videos based on what
+    you''ve watched before. It''s why you end up binge-watching shows you never knew
+    you needed.
 
 
-    Key Takeaway: AI recommends content.'
+    <b>Key Takeaway: AI recommends content.'
   titleFontOverride:
     overrideFont: 0
     font: {fileID: 0}

@@ -339,13 +339,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679647456a363450ab8d072b2a91f5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: Privacy Concerns
-  description: 'AI systems need a lot of personal data, which can raise privacy issues.
-    It''s like sharing your diary with a robot.
+  title: <size=24px>Privacy Concerns
+  description: '<size=20px>AI systems need a lot of personal data, which can raise
+    privacy issues. It''s like sharing your diary with a robot.
 
 
-    Key Takeaway: AI raises privacy
-    concerns.'
+    <b>Key Takeaway:
+    AI raises privacy concerns.'
   titleFontOverride:
     overrideFont: 0
     font: {fileID: 0}

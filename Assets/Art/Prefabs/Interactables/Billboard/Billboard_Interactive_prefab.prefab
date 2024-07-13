@@ -339,12 +339,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679647456a363450ab8d072b2a91f5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: Your Logo or Ad Here...
-  description: "Dive into SimpleVerse, a thrilling Metaverse where adventure meets
-    learning! Navigate through a rich virtual world, interact with diverse NPCs,
-    and explore unique \"Learn to Earn\" quests. \n\nUnravel secrets in a historic
+  title: <size=24px>Your Logo or Ad Here...
+  description: "<size=20px>Dive into SimpleVerse, a thrilling Metaverse where adventure
+    meets learning! Navigate through a rich virtual world, interact with diverse
+    NPCs, and explore unique \"Learn to Earn\" quests. \n\nUnravel secrets in a historic
     library, race in high-tech vehicles, and tackle dynamic challenges. Each quest
-    offers valuable knowledge, blending education with gameplay. \n\nJoin SimpleVerse
+    offers valuable knowledge, blending education with gameplay. \n\n<b>Join SimpleVerse
     today\u2014where every interaction promises new discoveries and rewards!"
   titleFontOverride:
     overrideFont: 0

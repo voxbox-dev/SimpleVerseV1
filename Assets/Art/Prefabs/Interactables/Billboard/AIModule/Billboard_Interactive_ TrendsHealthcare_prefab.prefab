@@ -339,13 +339,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679647456a363450ab8d072b2a91f5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: Future in Healthcare
-  description: 'Future AI developments will improve disease diagnosis and treatments.
-    It''s like having a doctor with superpowers.
+  title: <size=24px>Future in Healthcare
+  description: '<size=20px>Future AI developments will improve disease diagnosis
+    and treatments. It''s like having a doctor with superpowers.
 
 
-    Key Takeaway: AI will improve
-    healthcare.'
+    <b>Key Takeaway:
+    AI will improve healthcare.'
   titleFontOverride:
     overrideFont: 0
     font: {fileID: 0}

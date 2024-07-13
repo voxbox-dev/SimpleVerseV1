@@ -339,13 +339,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679647456a363450ab8d072b2a91f5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: Self-Driving Car
-  description: 'AI allows self-driving cars to understand the road and drive safely.
-    Imagine your car taking you to school while you catch up on your favorite YouTube
-    channel.
+  title: <size=24px>Self-Driving Car
+  description: '<size=20px>AI allows self-driving cars to understand the road and
+    drive safely. Imagine your car taking you to school while you catch up on your
+    favorite YouTube channel.
 
 
-    Key Takeaway: AI drives self-driving cars.'
+    <b>Key Takeaway: AI drives self-driving cars.'
   titleFontOverride:
     overrideFont: 0
     font: {fileID: 0}

@@ -210,13 +210,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679647456a363450ab8d072b2a91f5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: ' Voice Assistants'
-  description: 'AI-powered voice assistants like Siri and Alexa can understand and
-    respond to what you say. It''s like having a personal assistant who never rolls
-    their eyes at your requests.
+  title: <size=24px>Voice Assistants
+  description: '<size=20px>AI-powered voice assistants like Siri and Alexa can understand
+    and respond to what you say. It''s like having a personal assistant who never
+    rolls their eyes at your requests.
 
 
-    Key Takeaway: AI powers voice assistants.'
+    <b>Key Takeaway: AI powers voice assistants.'
   titleFontOverride:
     overrideFont: 0
     font: {fileID: 0}

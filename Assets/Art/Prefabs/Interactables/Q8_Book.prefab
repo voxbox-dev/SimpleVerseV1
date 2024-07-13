@@ -122,10 +122,37 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1975167633360672629}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     animatorEvent:
       events: []
     questEvent:
-      events: []
+      events:
+      - questID: 8
+        questEventType: 3
+        taskID: 1
   onExitEvent:
     id: 0
     unityEventIsSynced: 0
@@ -9979,14 +10006,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679647456a363450ab8d072b2a91f5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: Machine Learning
-  description: 'Machine learning is a way for computers to learn from data and get
-    better at tasks without being programmed for every single step. Think of it like
-    your favorite video game character leveling up automatically after each mission.
+  title: <size=24px>What is AI?
+  description: '<size=20px>Artificial Intelligence, or AI, is when computers do things
+    that usually need human intelligence, like recognizing speech or playing chess.
+    Imagine your smartphone being as smart as your best friend, except it never eats
+    your snacks.
 
 
-    Key
-    Takeaway: Machine learning helps computers learn from data.'
+    <b>Key Takeaway: AI helps computers act like humans.'
   titleFontOverride:
     overrideFont: 0
     font: {fileID: 0}
@@ -9997,7 +10024,7 @@ MonoBehaviour:
     material: {fileID: 0}
   backgroundColor: {r: 0, g: 0, b: 0, a: 0.93333334}
   foregroundColor: {r: 1, g: 1, b: 1, a: 1}
-  sprite: {fileID: 21300000, guid: 5ad184bfcb93c41f68fd9bd10d931378, type: 3}
+  sprite: {fileID: 21300000, guid: 7c895786baff342d1baea63fb28186da, type: 3}
   spriteSize: 0.373
   spriteRectSize: {x: 74.6, y: 42.618164}
   textDisplayRadius: 5.6899986
@@ -10007,26 +10034,11 @@ MonoBehaviour:
     unityEventIsSynced: 0
     unityEvent:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
+        m_Calls: []
     animatorEvent:
       events: []
     questEvent:
-      events:
-      - questID: 8
-        questEventType: 3
-        taskID: 1
+      events: []
 --- !u!1 &3421994753871064285
 GameObject:
   m_ObjectHideFlags: 0
@@ -15080,7 +15092,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8497644676050964965
 Transform:
   m_ObjectHideFlags: 0
