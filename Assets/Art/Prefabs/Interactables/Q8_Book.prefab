@@ -10025,8 +10025,8 @@ MonoBehaviour:
   backgroundColor: {r: 0, g: 0, b: 0, a: 0.93333334}
   foregroundColor: {r: 1, g: 1, b: 1, a: 1}
   sprite: {fileID: 21300000, guid: 7c895786baff342d1baea63fb28186da, type: 3}
-  spriteSize: 0.373
-  spriteRectSize: {x: 74.6, y: 42.618164}
+  spriteSize: 1
+  spriteRectSize: {x: 200, y: 114.25781}
   textDisplayRadius: 5.6899986
   markerDisplayRadius: 6
   onTextDisplayedEvent:

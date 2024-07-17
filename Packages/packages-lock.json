@@ -132,8 +132,8 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.textmeshpro": {
-      "version": "3.0.6",
-      "depth": 0,
+      "version": "3.0.8",
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.ugui": "1.0.0"
@@ -172,12 +172,13 @@
       "url": "https://packages.unity.com"
     },
     "io.spatial.unitysdk": {
-      "version": "1.44.0",
+      "version": "1.45.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.scriptablebuildpipeline": "1.21.1",
         "com.unity.editorcoroutines": "1.0.0",
+        "com.unity.textmeshpro": "3.0.8",
         "com.unity.visualscripting": "1.8.0",
         "com.unity.ai.navigation": "1.0.0-exp.4",
         "com.unity.nuget.mono-cecil": "1.11.4",

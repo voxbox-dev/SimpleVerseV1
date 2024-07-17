@@ -550,6 +550,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GlassSphere
       objectReference: {fileID: 0}
+    - target: {fileID: 8902681591589978057, guid: 07a67a827e6234d4fa9b683b0ef3aad0,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9122f5a76c34f450cbf15b1bee23b46a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07a67a827e6234d4fa9b683b0ef3aad0, type: 3}
 --- !u!4 &4895108172245739587 stripped
