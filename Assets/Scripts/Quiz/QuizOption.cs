@@ -12,7 +12,7 @@ namespace Simpleverse
         [SerializeReference] private string triggerRiseName;
         [SerializeReference] private string triggerHideName;
         private bool isCorrect;
-        private QuizManager quizManager;
+        private QuizScript quizScript;
         private Animator animator; // Reference to the Animator component
         private bool hasStartedRise = false;
 
@@ -25,7 +25,7 @@ namespace Simpleverse
 
         public void OnSelectOption()
         {
-            quizManager.OnOptionSelected(isCorrect, delayBetweenOptions);
+            quizScript.OnOptionSelected(isCorrect, delayBetweenOptions);
         }
 
         public IEnumerator DisplayOptionCoroutine(GameObject option, int enumeratorIndex)
@@ -53,7 +53,7 @@ namespace Simpleverse
         // PRIVATE METHODS
         void Start()
         {
-            quizManager = FindObjectOfType<QuizManager>();
+            quizScript = FindObjectOfType<QuizScript>();
             // Get the Animator component
             animator = GetComponent<Animator>();
         }

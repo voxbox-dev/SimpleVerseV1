@@ -339,7 +339,7 @@ MonoBehaviour:
   m_text: Solving puzzles
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 09ad01e1eac2447dba64a518842a34c2, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 5b5064789d13a4be1b1c5f7a36627066, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: b8ad843e0769d4c489ea164a41e71613, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
