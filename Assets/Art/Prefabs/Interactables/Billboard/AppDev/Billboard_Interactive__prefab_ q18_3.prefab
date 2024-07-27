@@ -339,15 +339,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679647456a363450ab8d072b2a91f5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: "<size=24px>AI Decision Making\t"
-  description: '<size=20px>AI uses neural networks to recognize patterns and make
-    decisions. It''s like recognizing your friend''s voice in a crowded room.
-
-
-    <b>Key
-    Takeaway: Neural networks help AI recognize patterns.
-
-'
+  title: <size=24px>Beta Testing
+  description: "<size=20px>Release a beta version to a small group of users to gather
+    feedback. It\u2019s like letting your friends try out your new game before you
+    release it to everyone else.\n<b>Key Takeaway:  Beta testing gathers feedback."
   titleFontOverride:
     overrideFont: 0
     font: {fileID: 0}
@@ -1098,7 +1093,7 @@ GameObject:
   - component: {fileID: 1641806293534744240}
   - component: {fileID: 4593054781810824626}
   m_Layer: 0
-  m_Name: Billboard_Interactive_ AIDecisionMaking_prefab
+  m_Name: Billboard_Interactive__prefab_ q18_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

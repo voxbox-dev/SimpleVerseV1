@@ -339,15 +339,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679647456a363450ab8d072b2a91f5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title: "<size=24px>AI Decision Making\t"
-  description: '<size=20px>AI uses neural networks to recognize patterns and make
-    decisions. It''s like recognizing your friend''s voice in a crowded room.
-
-
-    <b>Key
-    Takeaway: Neural networks help AI recognize patterns.
-
-'
+  title: <size=24px>Summary of Mobile App Development
+  description: "<size=20px>App development involves planning, coding, testing, and
+    maintaining software for mobile devices. It\u2019s like creating your own TikTok
+    or Snapchat.\n<b>Key Takeaway: App development involves planning, coding, testing,
+    and maintaining.\n"
   titleFontOverride:
     overrideFont: 0
     font: {fileID: 0}
@@ -1098,7 +1094,7 @@ GameObject:
   - component: {fileID: 1641806293534744240}
   - component: {fileID: 4593054781810824626}
   m_Layer: 0
-  m_Name: Billboard_Interactive_ AIDecisionMaking_prefab
+  m_Name: Billboard_Interactive__prefab_ q21_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
