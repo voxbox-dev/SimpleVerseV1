@@ -7,7 +7,7 @@ namespace Simpleverse
 {
     public class AIModuleQuestScript : MonoBehaviour
     {
-        [SerializeField] private AIModuleQuestSO aiModuleQuestSO;
+        [SerializeField] private BillboardsSO billboardsSO;
         [SerializeField] private ulong questRewardAmount = 50;
         private List<GameObject> instantiatedBillboards = new List<GameObject>();
 
@@ -31,7 +31,7 @@ namespace Simpleverse
         }
 
 
-        public void PlaceBillboards(int numberOfBillboardsToPlace)
+        public void PlaceBillboards()
         {
             if (BillboardManager.Instance == null)
             {
@@ -39,13 +39,13 @@ namespace Simpleverse
                 return;
             }
 
-            if (aiModuleQuestSO.questBillboardPrefabs == null || aiModuleQuestSO.questBillboardPrefabs.Count == 0)
+            if (billboardsSO.questBillboardPrefabs == null || billboardsSO.questBillboardPrefabs.Count == 0)
             {
                 Debug.LogError("No quest billboard prefabs available.");
                 return;
             }
 
-            List<Transform> allPositions = BillboardManager.Instance.billboardPositions;
+            List<Transform> allPositions = BillboardManager.Instance.techBillboardPositions;
             if (allPositions == null || allPositions.Count == 0)
             {
                 Debug.LogError("No billboard positions available.");
@@ -66,9 +66,7 @@ namespace Simpleverse
                 return;
             }
 
-            // int positionsToPlace = Mathf.Min(numberOfBillboardsToPlace, allPositions.Count, aimoduleQuestSO.questBillboardPrefabs.Count + 1); // +1 for the default prefab
-
-            int positionsToPlace = Mathf.Min(numberOfBillboardsToPlace, allPositions.Count);
+            int positionsToPlace = Mathf.Min(billboardsSO.questBillboardPrefabs.Count, allPositions.Count);
 
             // Shuffle the list of positions
             for (int i = 0; i < allPositions.Count; i++)
@@ -81,7 +79,7 @@ namespace Simpleverse
 
             for (int i = 0; i < positionsToPlace; i++)
             {
-                GameObject prefabToPlace = i < aiModuleQuestSO.questBillboardPrefabs.Count ? aiModuleQuestSO.questBillboardPrefabs[i] : defaultPrefab;
+                GameObject prefabToPlace = i < billboardsSO.questBillboardPrefabs.Count ? billboardsSO.questBillboardPrefabs[i] : defaultPrefab;
                 GameObject instantiatedPrefab = Instantiate(prefabToPlace, allPositions[i].position, allPositions[i].rotation);
 
                 instantiatedBillboards.Add(instantiatedPrefab);
