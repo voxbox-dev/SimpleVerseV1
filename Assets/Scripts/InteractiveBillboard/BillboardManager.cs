@@ -9,7 +9,7 @@ namespace Simpleverse
         public static BillboardManager Instance { get; private set; }
         [SerializeField]
         private GameObject defaultBillboardPrefab;
-        public List<Transform> techBillboardPositions; // Assign in-scene billboards here in the inspector
+        public List<Transform> techBillboardPositions, entrepreneurBillboardPositions; // Assign in-scene billboards here in the inspector
 
         private void Awake()
         {
