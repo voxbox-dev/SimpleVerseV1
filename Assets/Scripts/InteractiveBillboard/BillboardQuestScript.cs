@@ -5,13 +5,43 @@ using UnityEngine;
 
 namespace Simpleverse
 {
-    public class AIModuleQuestScript : MonoBehaviour
+    enum ModuleName
+    {
+        AI,
+        App_Dev
+    }
+
+    public class BillboardQuestScript : MonoBehaviour
     {
         [SerializeField] private BillboardsSO billboardsSO;
-        [SerializeField] private ulong questRewardAmount = 50;
-        private List<GameObject> instantiatedBillboards = new List<GameObject>();
 
-       
+        [SerializeField] private ulong questRewardAmount = 50;
+
+        // provide tooltip
+        [Tooltip("Select the module that this quest is apart of.")]
+        [SerializeField] private ModuleName moduleName;
+        private List<GameObject> instantiatedBillboards = new List<GameObject>();
+        private List<Transform> questBillboardPositions = new List<Transform>();
+
+
+
+        // on start, if AI is selected, set positions for AI billboards to BillboardManager.techBillboardPositions, else set positions for App_Dev billboards to BillboardManager.appDevBillboardPositions
+        private void Start()
+        {
+            if (billboardsSO == null)
+            {
+                Debug.LogError("BillboardsSO is not set.");
+                return;
+            }
+            if (questBillboardPositions == null || questBillboardPositions.Count == 0)
+            {
+                Debug.LogError("No quest billboard positions are set.");
+                return;
+            }
+
+            
+        }
+
         public void AwardQuestCurrency()
         {
             if (questRewardAmount <= 0)
@@ -45,12 +75,24 @@ namespace Simpleverse
                 return;
             }
 
-            List<Transform> allPositions = BillboardManager.Instance.techBillboardPositions;
-            if (allPositions == null || allPositions.Count == 0)
+              // If the quest billboard positions are not set, set them based on the module name
+            if (moduleName == ModuleName.AI) {
+                questBillboardPositions = BillboardManager.Instance.aiBillboardPositions;
+                //Log the count of the quest billboard positions
+                Debug.Log("Success Quest billboard positions count: " + questBillboardPositions.Count);
+            } else if (moduleName == ModuleName.App_Dev) {
+                questBillboardPositions = BillboardManager.Instance.appDevBillboardPositions;
+                //Log the count of the quest billboard positions
+                Debug.Log("Success Quest billboard positions count: " + questBillboardPositions.Count);
+            } else {
+                Debug.LogError("Module name is not set.");
+            }
+
+            if (questBillboardPositions == null || questBillboardPositions.Count == 0)
             {
                 Debug.LogError("No billboard positions available.");
                 return;
-            }
+            } 
 
             GameObject defaultPrefab = BillboardManager.Instance.DefaultBillboardPrefab;
             if (defaultPrefab == null)
@@ -59,37 +101,30 @@ namespace Simpleverse
                 return;
             }
 
-
-            if (allPositions == null || allPositions.Count == 0)
-            {
-                Debug.LogError("No positions available for placing billboards.");
-                return;
-            }
-
-            int positionsToPlace = Mathf.Min(billboardsSO.questBillboardPrefabs.Count, allPositions.Count);
+            int positionsToPlace = Mathf.Min(billboardsSO.questBillboardPrefabs.Count, questBillboardPositions.Count);
 
             // Shuffle the list of positions
-            for (int i = 0; i < allPositions.Count; i++)
+            for (int i = 0; i < questBillboardPositions.Count; i++)
             {
-                Transform temp = allPositions[i];
-                int randomIndex = Random.Range(i, allPositions.Count);
-                allPositions[i] = allPositions[randomIndex];
-                allPositions[randomIndex] = temp;
+                Transform temp = questBillboardPositions[i];
+                int randomIndex = Random.Range(i, questBillboardPositions.Count);
+                questBillboardPositions[i] = questBillboardPositions[randomIndex];
+                questBillboardPositions[randomIndex] = temp;
             }
 
             for (int i = 0; i < positionsToPlace; i++)
             {
                 GameObject prefabToPlace = i < billboardsSO.questBillboardPrefabs.Count ? billboardsSO.questBillboardPrefabs[i] : defaultPrefab;
-                GameObject instantiatedPrefab = Instantiate(prefabToPlace, allPositions[i].position, allPositions[i].rotation);
+                GameObject instantiatedPrefab = Instantiate(prefabToPlace, questBillboardPositions[i].position, questBillboardPositions[i].rotation);
 
                 instantiatedBillboards.Add(instantiatedPrefab);
             }
 
             // If there are still positions left after placing the specified number of billboards, fill them with the default prefab
-            for (int i = positionsToPlace; i < allPositions.Count; i++)
+            for (int i = positionsToPlace; i < questBillboardPositions.Count; i++)
             {
                 GameObject prefabToPlace = defaultPrefab;
-                GameObject instantiatedPrefab = Instantiate(prefabToPlace, allPositions[i].position, allPositions[i].rotation);
+                GameObject instantiatedPrefab = Instantiate(prefabToPlace, questBillboardPositions[i].position, questBillboardPositions[i].rotation);
 
                 instantiatedBillboards.Add(instantiatedPrefab);
             }

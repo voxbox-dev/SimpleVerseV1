@@ -4,10 +4,11 @@ using UnityEngine;
 
 namespace Simpleverse
 {
-   [CreateAssetMenu(fileName = "AIModuleQuestSO", menuName = "AI Module/AIModuleQuestSO")]
+   [CreateAssetMenu(fileName = "BillboardsSO", menuName = "Billboards/BillboardsSO")]
     public class BillboardsSO : ScriptableObject
     {
         public List<GameObject> questBillboardPrefabs;
         public GameObject defaultBillboardPrefab;
+        
     }
 }

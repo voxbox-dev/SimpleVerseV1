@@ -656,7 +656,7 @@ MonoBehaviour:
       events: []
     questEvent:
       events:
-      - questID: 11
+      - questID: 15
         questEventType: 3
         taskID: 2
   onEnterEvent:
@@ -882,14 +882,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8731053377058350523}
-  m_LocalRotation: {x: -0.009894224, y: -0.7045015, z: 0.009624419, w: -0.70956826}
-  m_LocalPosition: {x: -31.9, y: 0.06, z: -0.211}
+  m_LocalRotation: {x: 0.000512155, y: 0.70710653, z: 0.00009255334, w: 0.70710677}
+  m_LocalPosition: {x: -44.26, y: 0.032, z: 0.027}
   m_LocalScale: {x: 0.17250578, y: 0.3385441, z: 9.75915}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8752566448206273808}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.034, y: 90, z: 0.049}
 --- !u!114 &8731053377058350521
 MonoBehaviour:
   m_ObjectHideFlags: 0
