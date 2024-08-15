@@ -1093,7 +1093,7 @@ GameObject:
   - component: {fileID: 1641806293534744240}
   - component: {fileID: 6974403339879639414}
   m_Layer: 0
-  m_Name: Billboard_Interactive_prefab
+  m_Name: Billboard_Interactive_default_prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
