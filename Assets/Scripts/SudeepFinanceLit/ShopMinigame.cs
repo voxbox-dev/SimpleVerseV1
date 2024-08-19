@@ -26,15 +26,18 @@ namespace Simpleverse
             pickupItems = new List<GameObject>(items);
             itemPrice = new List<float>(prices);
             pickedUp = new List<GameObject>();
-            state = "START";
+            state = "STARTING";
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (state.Equals("START"))
+            if (transform.Find("StartMinigame").gameObject.activeSelf){
+                state = "START";
+            }
+            else if (state.Equals("START"))
             {
-                start();
+                startGame();
             }
             else if (state.Equals("PLAY"))
             {
@@ -103,7 +106,7 @@ namespace Simpleverse
             }
         }
 
-        void start()
+        void startGame()
         {
             if (!transform.Find("StartMinigame").gameObject.activeSelf)
             {
