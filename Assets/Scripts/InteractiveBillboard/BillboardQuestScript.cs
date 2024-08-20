@@ -8,7 +8,8 @@ namespace Simpleverse
     enum ModuleName
     {
         AI,
-        App_Dev
+        App_Dev,
+        Finance_Lit
     }
 
     public class BillboardQuestScript : MonoBehaviour
@@ -82,6 +83,12 @@ namespace Simpleverse
                 Debug.Log("Success Quest billboard positions count: " + questBillboardPositions.Count);
             } else if (moduleName == ModuleName.App_Dev) {
                 questBillboardPositions = BillboardManager.Instance.appDevBillboardPositions;
+                //Log the count of the quest billboard positions
+                Debug.Log("Success Quest billboard positions count: " + questBillboardPositions.Count);
+            }
+            else if (moduleName == ModuleName.Finance_Lit)
+            {
+                questBillboardPositions = BillboardManager.Instance.financeLitBillboardPositions;
                 //Log the count of the quest billboard positions
                 Debug.Log("Success Quest billboard positions count: " + questBillboardPositions.Count);
             } else {
