@@ -658,7 +658,7 @@ MonoBehaviour:
     questEvent:
       events:
       - questID: 16
-        questEventType: 4
+        questEventType: 3
         taskID: 2
   onEnterEvent:
     id: 0

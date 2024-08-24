@@ -11,6 +11,13 @@ namespace Simpleverse
         private GameObject defaultBillboardPrefab;
         public List<Transform> aiBillboardPositions, appDevBillboardPositions; // Assign in-scene billboards here in the inspector
 
+
+        // log count of billboard positions at start
+        private void Start()
+        {
+            Debug.Log("BILLBOARD MANAGER-AI Billboard Positions: " + aiBillboardPositions.Count);
+            Debug.Log("BILLBOARD MANAGER-App Dev Billboard Positions: " + appDevBillboardPositions.Count);
+        }
         private void Awake()
         {
             Debug.Log("Billboard Manager Awake called");
@@ -28,9 +35,9 @@ namespace Simpleverse
         }
 
         public GameObject DefaultBillboardPrefab
-    {
-        get { return defaultBillboardPrefab; }
-    }
+        {
+            get { return defaultBillboardPrefab; }
+        }
 
         // public void InitializeBillboards(List<GameObject> billboards, GameObject billboardPrefab)
         // {
@@ -40,6 +47,6 @@ namespace Simpleverse
         //         Instantiate(billboardPrefab, billboard.transform.position, billboard.transform.rotation);
         //     }
         // }
-       
+
     }
 }
